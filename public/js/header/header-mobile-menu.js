@@ -4,6 +4,8 @@ import signUp from "../main/entrance/entrance-components/sign-up.js"
 const mobileBtn = document.querySelector('.navbar__btn')
 const navBarMenu = document.querySelector('.navbar_menu')
 
+
+
 // open mobile menu
 mobileBtn.addEventListener(`click`, mobileMenu)
 
@@ -30,7 +32,9 @@ const mobileUserBox = document.querySelector('.mobile__user-box')
 
 const mobileNavItemFirstChild = document.querySelector('.mobile__nav-item--first-child')
 
-if (mobileUserBox) {
+
+
+  if (mobileUserBox) {
     
   mobileNavItemFirstChild.style.justifyContent = 'center'
 
@@ -42,7 +46,7 @@ if (mobileUserBox) {
            window.location.href = '/';
            
          } else {
-           throw new Error('Ошибка запроса на сервер');
+           throw new Error('Server Error');
          }
        })
        .catch(error => console.error(error));
@@ -59,3 +63,4 @@ if (mobileUserBox) {
       signUp()
     })
   }
+

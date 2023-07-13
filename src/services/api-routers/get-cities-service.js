@@ -3,7 +3,6 @@ import fetch from "node-fetch";
 
 const API_KEY = process.env.API_KEY
 const apiUrl = process.env.apiUrl
-console.log(apiUrl)
 
 export const getCitiesService = async (req, res) => {
   
