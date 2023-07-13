@@ -1,0 +1,22 @@
+{{> head}}
+
+<body class="orders-body">
+
+  {{!-- orders-background --}}
+  <div class="orders-background"></div>
+  
+  {{!-- orders header/main/footer --}}
+  <div class="wrapper">
+    {{> second-header/header}}
+    {{> orders-page/orders-main}}
+    {{> footer/footer}}
+  </div>
+
+  {{!-- modal window --}}
+  {{> modal/modal }}
+
+  <script src="./orders.js" type="module"></script>
+  <script src="/node_modules/handlebars/dist/handlebars.min.js"></script>
+  <script src="/node_modules/notiflix/dist/notiflix-3.2.6.min.js"></script>
+</body>
+</html>

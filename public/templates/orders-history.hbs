@@ -1,0 +1,21 @@
+{{#each this}}
+
+{{!-- order history item --}}
+<li class="order__history-card" orderId="{{uniqueId}}">
+  <ul class="order__card-list">
+    <li class="order__card-item">
+      <p class="order__card-text">Order №</p>
+      <b class="order__card-number-order" type="{{reservationOrDelivery}}">{{this.el.orderStatus.order_number}}</b>
+    </li>
+    
+    {{!-- customer box --}}
+    <li class="order__card-item order__card-item--last-child">
+      <p class="order__customer-text">Customer: </p>
+      <div class="order__card-item-box">
+        <b class="order__card-name">{{name}}</b>
+        <b class="order__card-name">{{surname}}</b>
+      </div>
+    </li>
+  </ul>
+</li>
+{{/each}}

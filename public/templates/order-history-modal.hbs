@@ -1,0 +1,133 @@
+<div class="modal__order-number-box">
+  <b class="modal__order-number-title">Order №</b>
+  <p class="modal__order-number-info">{{this.el.orderStatus.order_number}}</p>
+</div>
+
+<ul class="modal__wine-list">
+
+  {{!-- wine img --}}
+  <li class="modal__wine-item">
+    <img class="modal__wine-img" src="{{this.el.data.wine_img}}" alt="{{this.el.data.name}}">
+  </li>
+
+  {{!-- wine info list --}}
+  <li class="modal__wine-item">
+
+    <ul class="modal__wine-info-list">
+
+      {{!-- wine name --}}
+      <li class="modal__wine-info-item">
+        <div class="modal__wine-item-box">
+          <b class="modal__wine-el">wine_name</b>
+          <p class="modal__wine-el-description">{{this.el.data.name}}</p>
+        </div>
+      </li>
+
+      {{!-- wine id --}}
+      <li class="modal__wine-info-item">
+        <div class="modal__wine-item-box">
+          <b class="modal__wine-el">product_id</b>
+          <p class="modal__wine-el-description modal__wine-el-description--id">{{this.el.data._id}}</p>
+        </div>
+      </li>
+      
+      {{!-- wine year --}}
+      <li class="modal__wine-info-item">
+        <div class="modal__wine-item-box">
+          <b class="modal__wine-el">year</b>
+          <p class="modal__wine-el-description">{{this.el.data.year}}</p>
+        </div>
+      </li>
+
+      {{!-- color --}}
+      <li class="modal__wine-info-item">
+        <div class="modal__wine-item-box">
+          <b class="modal__wine-el">color</b>
+          <p class="modal__wine-el-description modal__wine-el-description--color">{{this.el.data.color}}</p>
+        </div>
+      </li>
+
+      {{!-- value --}}
+      <li class="modal__wine-info-item">
+        <div class="modal__wine-item-box">
+          <b class="modal__wine-el">quantity</b>
+          <p class="modal__wine-el-description">{{this.el.value}}</p>
+        </div>
+      </li>
+
+    </ul>
+
+  </li>
+</ul>
+
+{{!-- modal status --}}
+<ul class="modal__status-list">
+
+  {{!-- total price --}}
+  <li class="modal__status-info modal__status-info--first-child">
+    <b class="modal__status-text">total</b>
+    <p class="modal__status-info-text modal__status-info-text--first-child">{{total}}</p>
+  </li>
+
+  {{!-- reservationOrDelivery --}}
+  <li class="modal__status-info">
+    <b class="modal__status-text">status</b>
+    <p class="modal__status-info-text modal__status-info-text--second-child">{{el}}</p>
+  </li>
+
+  {{!-- is paid? --}}
+  <li class="modal__status-info">
+    <b class="modal__status-text">paid</b>
+    <p class="modal__status-info-text modal__status-info-text--last-child">{{this.el.orderStatus.paid}}</p>
+  </li>
+
+</ul>
+
+{{#if (delivery)}}
+
+<ul class="delivery__address-list">
+
+  <li class="delivery__address-item">
+    <b class="delivery__address-item-text">City</b>
+    <p class="delivery__address-item-city">{{this.el.orderStatus.address.city}}</p>
+  </li>
+
+  <li class="delivery__address-item">
+    <b class="delivery__address-item-text">P.Office №</b>
+    <p class="delivery__address-item-city">{{this.el.orderStatus.address.postNumber}}</p>
+  </li>
+
+</ul>
+
+{{/if}}
+
+{{!-- customer info --}}
+<div class="customer__info">
+  <b class="customer__info-text">Customer info</b>
+  <svg class="customer__info-icon">
+    <use href="./images/sprite.svg#icon-order-customer-info"></use>
+  </svg>
+</div>
+
+<ul class="customer__list">
+  <li class="customner__item">
+    <div class="customer__username-box">
+      <b class="customer__username-text">Username:</b>
+      <p class="customer__username-info">{{username}}</p>
+    </div>
+  </li>
+
+  <li class="customner__item">
+    <div class="customer__initials-box">
+      <p class="customer__initials-name">{{name}}</p>
+      <p class="customer__initials-surname">{{surname}}</p>
+    </div>
+  </li>
+
+  <li class="customner__item">
+    <div class="customer__mail-box customer__mail-box-history">
+      <b class="customer__mail-text">mail:</b>
+      <p class="customer__mail-info">{{mail}}</p>
+    </div>
+  </li>
+</ul>

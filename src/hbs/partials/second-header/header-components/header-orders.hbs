@@ -1,0 +1,17 @@
+{{!-- btn back to main page --}}
+<li class="second__btn-item">
+  <a class="second__back-btn-link" href="/" aria-label="button back to main page">
+    <svg class="second__back-btn-icon">
+      <use href="./images/sprite.svg#icon-arrow-left"></use>
+    </svg>
+    <p class="second__back-btn-text">back</p>
+  </a>
+</li>
+
+
+{{!-- btn check history orders  --}}
+{{#if (eq user.role 'moderator')}}
+<li class="second__btn-item">
+  <button class="order__history-btn-swith order-current" type="button" aria-label="button check">History</button>
+</li>
+{{/if}}

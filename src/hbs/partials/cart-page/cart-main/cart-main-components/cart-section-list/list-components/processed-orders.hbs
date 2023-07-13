@@ -1,0 +1,210 @@
+<li class="cart__info-item processed-item">
+
+  {{!-- item title --}}
+  <div class="cart__info-item-box">
+    <div class="cart__info-item-title-box">
+      <h2 class="cart__info-item-title">Processed orders</h2>
+      <svg class="cart__info-item-icon">
+        <use href="./images/sprite.svg#icon-processed-item"></use>
+      </svg>
+    </div>
+    <button class="cart__processed-btn-story" type="submit" aria-label="btn add to history processed products">
+      <span class="cart__processed-btn-text">Add to story</span>
+      <svg class="cart__processed-icon">
+        <use href="./images/sprite.svg#icon-cart-story"></use>
+      </svg>
+    </button>
+  </div>
+  
+
+  {{!-- processed list --}}
+  <ul class="cart__processed-list">
+    {{#each user.cart.processed}}
+
+      
+
+    
+
+    {{!-- if reservation --}}
+    {{#if (reservation orderStatus)}}
+    <li class="cart__item-processed" itemId="{{this.data._id}}" value="{{this.value}}" price="{{this.data.price}}">
+
+      {{!-- item img --}}
+      <div class="cart__item-img">
+        <img src="{{this.data.wine_img}}" alt="{{this.data.name}}">
+      </div>
+
+      {{!-- item title --}}
+      <ul class="cart__order-item-list">
+        <li class="cart__item-element">
+          <h2 class="cart__item-title">{{this.data.name}}</h2>
+        </li>
+
+        {{!-- country section --}}
+        <li class="cart__item-element">
+
+          {{!-- country icon --}}
+          <ul class="cart__item-country-info">
+            {{#if (eq this.data.country "Germany")}}
+            <svg class="cart__country0icon" width="20px" height="20px">
+              <use href="../images/sprite.svg#icon-germany-flag"></use>
+            </svg>
+            {{/if}}
+            {{#if (eq this.data.country "Italy")}}
+            <svg class="cart__country0icon" width="20px" height="20px">
+              <use href="../images/sprite.svg#icon-italy-flag"></use>
+            </svg>
+            {{/if}}
+            {{#if (eq this.data.country "France")}}
+            <svg class="cart__country0icon" width="20px" height="20px">
+              <use href="../images/sprite.svg#icon-france-flag"></use>
+            </svg>
+            {{/if}}
+
+            {{!-- country region --}}
+            <b class="cart__country-region">{{this.data.region}},</b>
+
+            {{!-- country --}}
+            <b class="cart__country-country">{{this.data.country}}</b>
+          </ul>
+        </li>
+
+        {{!-- total price --}}
+        <li class="cart__item-element cart__ordered-item-element">
+
+          {{!-- total price --}}
+          <ul class="cart__info-price">
+            <li class="cart__info-price-item">
+              <b class="cart__info-unit-price">
+                {{totalItems}}
+              </b>
+            </li>
+
+            {{!-- quantity --}}
+            <li class="cart__info-price-item">
+              <b class="cart__info-price-text">{{this.value}}</b>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      {{!-- item status --}}
+      <div class="cart__order-status-box cart__order-status-box--reservation">
+        <p class="cart__order-status">reserved</p>
+        <svg class="cart__order-status-icon cart__order-status-icon--reserved">
+          <use href="../images/sprite.svg#icon-reserved"></use>
+        </svg>
+      </div>
+
+      {{!-- order number --}}
+      <div class="order__number-box order__number-box--reservation">
+        <p class="order__number-text">Order №</p>
+        <p class="order__number-value order__number-value--reservation">{{this.orderStatus.order_number}}</p>
+      </div>
+
+      {{!-- status --}}
+      <div class="cart__processed-info-status-text-box cart__processed-info-status-text-box--reservation ">
+        <p class="cart__info-status cart__info-status--reservation">
+          the product is complete
+        </p>
+        <svg class="cart__processed-info-status-icon">
+          <use href="../images/sprite.svg#icon-input-done"></use>
+        </svg>
+      </div>
+    </li>
+
+
+    {{!-- if shipment --}}
+    {{else}}
+    <li class="cart__item-processed" itemId="{{this.data._id}}" value="{{this.value}}" price="{{this.data.price}}">
+
+      {{!-- item img --}}
+      <div class="cart__item-img ">
+        <img src="{{this.data.wine_img}}" alt="{{this.data.name}}">
+      </div>
+
+      {{!-- item title --}}
+      <ul class="cart__order-item-list">
+        <li class="cart__item-element">
+          <h2 class="cart__item-title">{{this.data.name}}</h2>
+        </li>
+
+        {{!-- country section --}}
+        <li class="cart__item-element">
+
+          {{!-- country icon --}}
+          <ul class="cart__item-country-info">
+            {{#if (eq this.data.country "Germany")}}
+            <svg class="cart__country0icon" width="20px" height="20px">
+              <use href="../images/sprite.svg#icon-germany-flag"></use>
+            </svg>
+            {{/if}}
+            {{#if (eq this.data.country "Italy")}}
+            <svg class="cart__country0icon" width="20px" height="20px">
+              <use href="../images/sprite.svg#icon-italy-flag"></use>
+            </svg>
+            {{/if}}
+            {{#if (eq this.data.country "France")}}
+            <svg class="cart__country0icon" width="20px" height="20px">
+              <use href="../images/sprite.svg#icon-france-flag"></use>
+            </svg>
+            {{/if}}
+
+            {{!-- country region --}}
+            <b class="cart__country-region">{{this.data.region}},</b>
+
+            {{!-- country --}}
+            <b class="cart__country-country">{{this.data.country}}</b>
+          </ul>
+        </li>
+
+        {{!-- totalPrice --}}
+        <li class="cart__item-element cart__ordered-item-element">
+          <ul class="cart__info-price">
+
+            {{!-- total price --}}
+            <li class="cart__info-price-item">
+              <b class="cart__info-unit-price">
+                {{totalItems}}
+              </b>
+            </li>
+
+            {{!-- quantity --}}
+            <li class="cart__info-price-item">
+              <b class="cart__info-price-text">{{this.value}}</b>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      {{!-- item status --}}
+      <div class="cart__order-status-box cart__order-status-box--shipment">
+        <p class="cart__order-status cart__order-status--shipment">shipment</p>
+        <svg class="cart__order-status-icon cart__order-status-icon--reserved">
+          <use href="../images/sprite.svg#icon-shipment"></use>
+        </svg>
+      </div>
+
+      {{!-- order number --}}
+      <div class="order__number-box order__number-box--shipment">
+        <p class="order__number-text">Order №</p>
+        <p class="order__number-value order__number-value--shipment">{{this.orderStatus.order_number}}</p>
+      </div>
+
+      {{!-- status --}}
+      <div class="cart__processed-info-status-text-box cart__processed-info-status-text-box--shipment">
+        <p class="cart__info-status cart__info-status--shipment">
+          Item sent for delivery
+        </p>
+        <svg class="cart__processed-info-status-icon">
+          <use href="../images/sprite.svg#icon-input-done"></use>
+        </svg>
+      </div>
+    </li>
+    {{/if}}
+
+    
+
+    {{/each}}
+  </ul>
+</li>

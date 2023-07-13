@@ -1,0 +1,328 @@
+<ul class="current__list">
+
+  {{!-- current item name --}}
+  <li class="current__item current__item--first">
+    <h1 class="current__name">{{name}}</h1>
+  </li>
+
+  <li class="current__item">
+
+    <div class="current__top-box">
+
+      <img class="current__img" src="{{wine_img}}" alt="{{name}}">
+
+      {{!-- current description list --}}
+      <ul class="current__main-description-list">
+
+        {{!-- region,country --}}
+        <li class="current__main-description-item">
+          <div class="current__main-description-box current__main-description-box--country">
+            <div class="current__deco-box">
+              <div class="current__country current__anim-element">
+                {{#if (eq country "Germany")}}
+                <svg class="current__country-icon">
+                  <use href="../images/sprite.svg#icon-germany-flag"></use>
+                </svg>
+                {{/if}}
+                {{#if (eq country "Italy")}}
+                <svg class="current__country-icon">
+                  <use href="../images/sprite.svg#icon-italy-flag"></use>
+                </svg>
+                {{/if}}
+                {{#if (eq country "France")}}
+                <svg class="current__country-icon">
+                  <use href="../images/sprite.svg#icon-france-flag"></use>
+                </svg>
+                {{/if}}
+                <b class="current__color-text current__color-text--country">{{region}},{{country}}</b>
+              </div>
+            </div>
+            <div class="current__deco--first-block current__deco--first-block-country">
+              <div class="current__deco-element-first"></div>
+            </div>
+            <div class="current__deco--last-block">
+              <div class="current__deco-element-last"></div>
+            </div>
+          </div>
+        </li>
+
+        {{!-- year --}}
+        <li class="current__main-description-item">
+          <div class="current__main-description-box">
+            <div class="current__deco-box">
+              <b class="current__year current__anim-element">{{year}} yr.</b>
+            </div>
+            <div class="current__deco--first-block current__deco--first-block-year">
+              <div class="current__deco-element-first"></div>
+            </div>
+            <div class="current__deco--last-block">
+              <div class="current__deco-element-last"></div>
+            </div>
+          </div>
+        </li>
+
+        {{!-- color --}}
+        <li class="current__main-description-item">
+          <div class="current__main-description-box">
+            <div class="current__deco-box">
+              <div class="current__color current__anim-element">
+                <b class="current__color-text">{{color}}</b>
+                {{#if (eq color "red")}}
+                <svg width="20px" height="20px">
+                  <use href="../images/sprite.svg#icon-current-red-icon"></use>
+                </svg>
+                {{/if}}
+                {{#if (eq color "white")}}
+                <svg width="20px" height="20px">
+                  <use href="../images/sprite.svg#icon-current-white-icon"></use>
+                </svg>
+                {{/if}}
+                {{#if (eq color "rose")}}
+                <svg width="20px" height="20px">
+                  <use href="../images/sprite.svg#icon-current-rose-icon"></use>
+                </svg>
+                {{/if}}
+              </div>
+            </div>
+            <div class="current__deco--first-block">
+              <div class="current__deco-element-first"></div>
+            </div>
+            <div class="current__deco--last-block">
+              <div class="current__deco-element-last"></div>
+            </div>
+          </div>
+        </li>
+
+        {{!-- rating --}}
+        <li class="current__main-description-item">
+          <div class="current__main-description-box">
+            <div class="current__deco-box">
+              <div class="current__rating current__anim-element">
+                <b class="current__rating-text ">
+                  {{rating}}
+                </b>
+                <svg width="14px" height="14px">
+                  <use href="../images/sprite.svg#icon-rating"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="current__deco--first-block">
+              <div class="current__deco-element-first"></div>
+            </div>
+            <div class="current__deco--last-block">
+              <div class="current__deco-element-last"></div>
+            </div>
+          </div>
+        </li>
+
+        {{!-- alcohol  --}}
+        <li class="current__main-description-item">
+          <div class="current__main-description-box">
+            <div class="current__deco-box">
+              <b class="current__alcohol current__anim-element">{{alcohol}} alc.</b>
+            </div>
+            <div class="current__deco--first-block current__deco--first-block-alcohol">
+              <div class="current__deco-element-first"></div>
+            </div>
+            <div class="current__deco--last-block">
+              <div class="current__deco-element-last"></div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      {{!-- counter , btn add to cart --}}
+      <div class="current__add-to-cart-box">
+
+        <p class="current__price-text" price="{{price}}">{{price}} $</p>
+        <button type="button" class="current__add-to-cart" aria-label="button add to cart products">
+          <b class="current__add-to-cart-text">Add</b>
+          <svg class="current__add-to-cart-icon" width="22px" height="25px">
+            <use href="../images/sprite.svg#icon-cart-add"></use>
+          </svg>
+          <svg class="current__btn-add-icon-loading">
+            <use href="./images/sprite.svg#icon-loading-additional"></use>
+          </svg>
+        </button>
+        
+        {{!-- counter --}}
+        <div class="current__product-counter">
+
+          <button type="button" class="current__product-decrement" aria-label="remove one item">
+            <svg class="product__icon-decrement" width="16px" height="16px">
+              <use href="../images/sprite.svg#icon-minus"></use>
+            </svg>
+          </button>
+
+          <input type="number" value="1" min="1" max="10" class="current__product-value" aria-label="input item">
+
+          <button type="button" class="current__product-increment" aria-label="add one item">
+
+            <svg class="product__icon-increment" width="16px" height="16px">
+              <use href="../images/sprite.svg#icon-plus"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </li>
+
+  <li class="current__item">
+
+    <ul class="current__description-list current__element-list">
+
+      {{!-- title description --}}
+      <li class="current__description-item current__element-item">
+        <h2 class="current__description-title current__title">Description</h2>
+        <svg class="current__description-icon">
+          <use href="../images/sprite.svg#icon-description"></use>
+        </svg>
+      </li>
+
+      {{!-- description --}}
+      <li class="current__description-item current__element-item current__element-item--last-child">
+        <p class="current__description-text current__info-text">{{description}}</p>
+      </li>
+    </ul>
+  </li>
+
+  <li class="current__item">
+    {{!-- title grape varieties --}}
+    <ul class="current__grape-varieties-list current__element-list current__element-list--end">
+
+      <li class="current__grape-varieties-item current__element-item">
+        <h2 class="current__grape-varieties-title current__title">Grape varieties</h2>
+        <svg class="current__description-icon" width="50" height="50">
+          <use href="../images/sprite.svg#icon-grapes-varieties"></use>
+        </svg>
+      </li>
+
+      {{!-- grape varieties --}}
+      <li class="current__grape-varieties-item current__element-item current__element-item--last-child">
+        <p class="current__grape-varieties-info current__info-text">{{characteristics.grape_varieties}}</p>
+      </li>
+
+    </ul>
+  </li>
+
+  <li class="current__item">
+
+    {{!-- title fermentation --}}
+    <ul class="current__fermentation-list current__element-list">
+      <li class="current__fermentation-item current__element-item">
+        <h2 class="current__fermentation-title current__title">Fermentation</h2>
+        <svg class="current__description-icon" width="50" height="50">
+          <use href="../images/sprite.svg#icon-fermentation"></use>
+        </svg>
+      </li>
+
+      {{!-- fermentation --}}
+      <li class="current__fermentation-item current__element-item current__element-item--last-child">
+        <p class="current__fermentation-info current__info-text">{{characteristics.fermentation}}</p>
+      </li>
+
+    </ul>
+  </li>
+
+  
+  <li class="current__item">
+
+    {{!-- bouquet title --}}
+    <ul class="current__bouquet-list current__element-list current__element-list--end">
+      <li class="current__bouquet-item current__element-item">
+        <h2 class="current__bouquet-title current__title">Bouquet</h2>
+        <svg class="current__description-icon" width="50" height="50">
+          <use href="../images/sprite.svg#icon-bouquet"></use>
+        </svg>
+      </li>
+
+      {{!-- bouquet --}}
+      <li class="current__bouquet-item current__element-item current__element-item--last-child">
+        <p class="current__bouquet-info current__info-text">{{characteristics.bouquet}}</p>
+      </li>
+
+    </ul>
+  </li>
+
+
+  <li class="current__item">
+
+    {{!-- taste title --}}
+    <ul class="current__taste-list current__element-list">
+      <li class="current__taste-item current__element-item">
+        <h2 class="current__taste-title current__title">Taste</h2>
+        <svg class="current__description-icon" width="50" height="50">
+          <use href="../images/sprite.svg#icon-taste"></use>
+        </svg>
+      </li>
+
+      {{!-- taste --}}
+      <li class="current__taste-item current__element-item current__element-item--last-child">
+        <p class="current__taste-info current__info-text">{{characteristics.taste}}</p>
+      </li>
+    </ul>
+
+  </li>
+
+  <li class="current__item">
+
+    {{!-- Serving suggestions title --}}
+    <ul class="current__serving-suggestion-list current__element-list current__element-list--end">
+
+      <li class="current__serving-suggestion-item current__element-item">
+        <h2 class="current__serving-suggestion-title current__title current__title-suggestion">Serving suggestions</h2>
+        <svg class="current__description-icon" width="50" height="50">
+          <use href="../images/sprite.svg#icon-serving-suggestion"></use>
+        </svg>
+      </li>
+
+      {{!-- Serving suggestions --}}
+      <li class="current__serving-suggestion-item current__element-item current__element-item--last-child">
+        <p class="current__serving-suggestion-info current__info-text">{{characteristics.serving_suggestions}}</p>
+      </li>
+    </ul>
+  </li>
+
+
+  <li class="current__item">
+
+    {{!-- reviews title --}}
+    <ul class="current__expert-list">
+      <li class="current__expert-item current__expert-item-up">
+        <h2 class="current__expert-title current__title current__title-expert">What our experts say</h2>
+        <svg class="current__expert-icon-title">
+          <use href="../images/sprite.svg#icon-expert-comment"></use>
+        </svg>
+      </li>
+
+      {{!-- reviews --}}
+      {{#each reviews}}
+      <li class="current__expert-item">
+
+        <ul class="current__opinion-list">
+
+          <li class="current__opinion-item current__opinion-item-up">
+            <div class="current-opinion-icon-box">
+              <svg class="current__opinion-icon" width="50" height="50">
+                <use href="../images/sprite.svg#icon-expert"></use>
+              </svg>
+              <svg class="current__opinion-inside-icon" width="15" height="15">
+                <use href="../images/sprite.svg#icon-expert-comment"></use>
+              </svg>
+            </div>
+            <h2 class="current__opinion-author">{{author}}</h2>
+          </li>
+
+          <li class="current__opinion-item current__opinion-item-bottom">
+            <p class="current__opinion-comment">{{comment}}</p>
+          </li>
+
+        </ul>
+      </li>
+      {{/each}}
+    </ul>
+  </li>
+
+</ul>
+
+<button type="button" class="current__back-btn" aria-label="button back to product list">back</button>

@@ -1,0 +1,95 @@
+    {{#each this}}
+    <li class="product__item" wineId="{{_id}}" value="1">
+
+      {{!-- wine ing --}}
+      <img class="product__image" src="{{wine_img}}" alt="{{name}}" />
+
+      {{!-- product info list --}}
+      <ul class="product__info">
+        
+        {{!-- item name --}}
+        <li class="product__info-item">
+          <h2 class="product__info-name" name="name">{{name}}</h2>
+        </li>
+        
+        {{!-- item year --}}
+        <li class="product__info-item">
+          <p class="product__info-year" name="year">{{year}}</p>
+        </li>
+
+        {{!-- country/region --}}
+        <li class="product__info-item">
+          {{! country flag }}
+          {{#if (countryEquals country "Germany")}}
+          <svg width="20px" height="20px">
+            <use href="../images/sprite.svg#icon-germany-flag"></use>
+          </svg>
+          {{/if}}
+          {{#if (countryEquals country "Italy")}}
+          <svg width="20px" height="20px">
+            <use href="../images/sprite.svg#icon-italy-flag"></use>
+          </svg>
+          {{/if}}
+          {{#if (countryEquals country "France")}}
+          <svg width="20px" height="20px">
+            <use href="../images/sprite.svg#icon-france-flag"></use>
+          </svg>
+          {{/if}}
+      
+          <p class="product__info-region">{{region}}, {{country}}</p>
+        </li>
+
+        {{!-- price --}}
+        <li class="product__info-item product__info-item--last-child">
+
+          <p class="product__info-price" item-price="{{price}}" name="price">{{price}}</p>
+          <div class="product__cart-box">
+
+            {{!-- btn add to cart --}}
+            <button class="product__cart-btn cart-btn" type="button" aria-label="add to cart button">
+              <b class="product__cart-btn-text">Add</b>
+              <svg class="product__cart-btn-icon" width="22px" height="25px">
+                <use href="../images/sprite.svg#icon-cart-add"></use>
+              </svg>
+              <svg class="product__btn-add-icon-loading">
+                <use href="./images/sprite.svg#icon-loading-additional"></use>
+              </svg>
+            </button>
+            
+            {{!-- product counter --}}
+            <div class="product__counter" value="1">
+              <button type="button" class="product__decrement" aria-label="add one item">
+                <svg class="product__icon-decrement" width="16px" height="16px">
+                  <use href="../images/sprite.svg#icon-minus"></use>
+                </svg>
+              </button>
+
+              <input type="number" value="1" min="1" max="10"
+                class="product__value" aria-label="counter input" />
+
+              <button type="button" class="product__increment" aria-label="remove one item">
+                <svg class="product__icon-increment" width="16px" height="16px">
+                  <use href="../images/sprite.svg#icon-plus"></use>
+                </svg>
+              </button>
+
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      {{!-- item rating --}}
+      <div class="product__rating">
+        <svg class="product__icon-rating" width="50px" height="50px">
+          <use href="../images/sprite.svg#icon-rating"></use>
+        </svg>
+        <b class="product__rating-value">{{rating}}</b>
+      </div>
+
+      {{!-- if there was a click on the card, the loading animation --}}
+      <svg class="product__loading-icon">
+        <use href="./images/sprite.svg#icon-loading"></use>
+      </svg>
+
+    </li>
+    {{/each}}

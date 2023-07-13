@@ -1,0 +1,44 @@
+<header class="second__header">
+
+  <div class="container second__header-container">
+  
+    {{!-- btn back to main page --}}
+    <ul class="second__btn-list">
+
+      {{!-- page cart --}}
+      {{#if (eq page 'cart') }}
+        
+        {{> second-header/header-components/header-cart}}
+        
+      {{/if}}
+
+      {{!-- moderator page orders --}}
+      {{#if (eq page 'orders') }}
+      
+        {{> second-header/header-components/header-orders}}
+       
+      {{/if}}
+
+      {{!-- article page --}}
+      {{#if (eq page 'article')}}
+
+        <li class="second__btn-item">
+          <a class="second__back-btn-link" href="/" aria-label="button back to main page">
+            <svg class="second__back-btn-icon">
+              <use href="./images/sprite.svg#icon-arrow-left"></use>
+            </svg>
+            <p class="second__back-btn-text">back</p>
+          </a>
+        
+        </li>
+
+      {{/if}}
+
+    </ul>
+  
+    {{!-- logo --}}
+    <a class="second__logo" href="/" aria-label="logo">Wine Shop</a>
+  
+  </div>
+
+</header>

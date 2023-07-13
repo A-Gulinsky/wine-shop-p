@@ -1,0 +1,19 @@
+{{!-- btn back to main page --}}
+<li class="second__btn-item">
+  <a class="second__back-btn-link" href="/">
+    <svg class="second__back-btn-icon">
+      <use href="./images/sprite.svg#icon-arrow-left"></use>
+    </svg>
+    <p class="second__back-btn-text">back</p>
+  </a>
+
+</li>
+
+{{!-- if user is online add btn history --}}
+{{#if user}}
+<li class="second__btn-item">
+
+  <button class="cart__btn-history cart-current">history</button>
+
+</li>
+{{/if}}

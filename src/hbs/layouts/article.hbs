@@ -1,0 +1,17 @@
+{{> head}}
+
+<body>
+  
+  <div class="main-background"></div>
+  
+  {{!-- index - header/main/footer --}}
+  <div class="wrapper">
+    {{> second-header/header }}
+    {{> article-page/article-main}}
+    {{> footer/footer}}
+  </div>
+
+  <script src="./article.js" type="module"></script>
+  <script src="/node_modules/handlebars/dist/handlebars.min.js"></script>
+</body>
+</html>

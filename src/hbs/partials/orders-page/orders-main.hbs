@@ -1,0 +1,40 @@
+<main class="orders-main">
+
+  {{!-- if user is logged --}}
+  {{#if user}}
+
+    {{!-- moderator's window --}}
+    {{!-- check on moderator --}}
+    {{#if (eq user.role 'moderator')}}
+
+      {{!-- orders title --}}
+      {{> orders-page/orders-main-components/orders-title}}
+
+      {{!-- orders list --}}
+      {{> orders-page/orders-main-components/orders-list}}
+
+      {{!-- HISTORY --}}
+      
+      {{!-- section history title --}}
+      {{> orders-page/orders-main-components/orders-history-title}}
+
+      {{!-- order history list section --}}
+      {{> orders-page/orders-main-components/orders-history-list}}
+
+    {{!-- if user online but not a moderator --}}
+    {{else}}
+
+      {{!-- error --}}
+      {{> orders-page/orders-main-components/orders-error}}
+
+    {{/if}}
+
+  {{!-- if no one logged --}}
+  {{else}}
+
+  {{!-- error --}}
+  {{> orders-page/orders-main-components/orders-error}}
+
+{{/if}}
+
+</main>

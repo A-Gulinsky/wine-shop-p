@@ -1,0 +1,26 @@
+<main class="cart-main">
+
+  {{!-- if user is signIn --}}
+  {{#if user}}
+
+    {{!-- main/ section title --}}
+    {{> cart-page/cart-main/cart-main-components/cart-section-title}}
+
+    {{!-- main/ section cart items --}}
+    {{> cart-page/cart-main/cart-main-components/cart-section-list/cart-section-list}}
+
+    {{!-- main/section history title --}}
+    {{> cart-history-page/history-main-components/cart-history-title}}
+
+    {{!-- main/section history list --}}
+    {{> cart-history-page/history-main-components/cart-history-list}}
+
+  {{!-- if user don't signIn --}}
+  {{else}}
+
+  {{!-- error --}}
+    {{> cart-page/cart-main/cart-main-components/cart-section-error}}
+
+  {{/if}}
+
+</main>

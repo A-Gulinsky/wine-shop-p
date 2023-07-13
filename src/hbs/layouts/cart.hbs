@@ -1,0 +1,25 @@
+{{> head}}
+
+<body class="cart">
+
+  {{!-- background cart --}}
+  {{> cart-page/background-cart}}
+
+  {{!-- cart - header/main/footer --}}
+  <div class="wrapper">
+  
+    {{> second-header/header}}
+    {{> cart-page/cart-main/main}}
+    {{> footer/footer}}
+
+  </div>
+  
+  {{!-- modal window --}}
+  {{> cart-page/modal-cart}}
+
+  <script src="cart.js" type="module"></script>
+  <script src="/node_modules/handlebars/dist/handlebars.min.js"></script>
+  <script src="/node_modules/notiflix/dist/notiflix-3.2.6.min.js"></script>
+</body>
+
+</html>

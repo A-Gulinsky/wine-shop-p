@@ -1,0 +1,40 @@
+{{#each this}}
+
+  <li class="history__item">
+  
+    {{!-- description-box --}}
+    <div class="history__description-box">
+      <img class="history__img" src="{{this.data.wine_img}}" alt="{{this.data.name}}">
+      <div class="history__main-description-box">
+        <ul class="history__main-list">
+          <li class="history__main-item">
+            <h2 class="history__main-element history__main-element--first-child">{{this.data.name}}</h2>
+          </li>
+          <li class="history__main-item">
+            <p class="history__main-element">{{this.data.year}} yr.</p>
+          </li>
+          <li class="history__main-item">
+            <p class="history__main-element history__main-element--last-child">{{this.data.color}}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    {{!-- history total box --}}
+    <div class="history__total-box">
+      <b class="history__total-price">{{historyTotalPrice}}</b>
+      <b class="history__total-quantity">{{value}}</b>
+    </div>
+  
+    {{!-- history data box --}}
+    <div class="history__data-box">
+      
+      {{#if (historydelivery)}}
+      <p class="history__order-number history-shipment">{{this.orderStatus.order_number}}</p>
+      {{else}}
+      <p class="history__order-number history-reservation">{{this.orderStatus.order_number}}</p>
+      {{/if}}
+  
+  </li>
+
+{{/each}}

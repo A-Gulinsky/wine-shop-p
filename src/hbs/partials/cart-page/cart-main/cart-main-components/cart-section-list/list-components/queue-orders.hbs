@@ -1,0 +1,123 @@
+<li class="cart__info-item queue-item">
+
+  {{!-- item title --}}
+  <div class="cart__info-item-box">
+    <h2 class="cart__info-item-title">Item in Queue</h2>
+    <svg class="cart__info-item-icon">
+      <use href="./images/sprite.svg#icon-queue"></use>
+    </svg>
+  </div>
+
+  {{!-- item list --}}
+  <ul class="cart__product-list">
+    {{#each user.cart.waiting}}
+
+    
+
+    <li class="cart__item disactive" itemId="{{this.data._id}}" value="{{this.value}}" price="{{this.data.price}}">
+
+      {{!-- item img --}}
+      <div class="cart__item-img">
+        <img src="{{this.data.wine_img}}" alt="{{this.data.name}}">
+      </div>
+
+      {{!-- info product --}}
+      <ul class="cart__item-list">
+
+        {{!-- item title --}}
+        <li class="cart__item-element cart__item-element--first-child">
+          <h2 class="cart__item-title">{{this.data.name}}</h2>
+        </li>
+
+        {{!-- country section--}}
+        <li class="cart__item-element">
+          <ul class="cart__item-country-info">
+
+            {{!-- country icon --}}
+            {{#if (eq this.data.country "Germany")}}
+            <svg class="cart__country0icon" width="20px" height="20px">
+              <use href="../images/sprite.svg#icon-germany-flag"></use>
+            </svg>
+            {{/if}}
+            {{#if (eq this.data.country "Italy")}}
+            <svg class="cart__country0icon" width="20px" height="20px">
+              <use href="../images/sprite.svg#icon-italy-flag"></use>
+            </svg>
+            {{/if}}
+            {{#if (eq this.data.country "France")}}
+            <svg class="cart__country0icon" width="20px" height="20px">
+              <use href="../images/sprite.svg#icon-france-flag"></use>
+            </svg>
+            {{/if}}
+
+            {{!-- region --}}
+            <b class="cart__country-region">{{this.data.region}},</b>
+
+            {{!-- country --}}
+            <b class="cart__country-country">{{this.data.country}}</b>
+          </ul>
+        </li>
+
+        {{!-- price for 1 bottle --}}
+        <li class="cart__item-element cart__item-element--last-child">
+          <ul class="cart__info-price">
+            <li class="cart__info-price-item">
+              <b class="cart__info-unit-price">
+                {{this.data.price}}
+              </b>
+            </li>
+            <li class="cart__info-price-item">
+              <b class="cart__info-price-text">1</b>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      {{!-- price for all bottles current elemnt in the cart/ increment-decrement --}}
+      <div class="cart__box">
+        {{!-- total price --}}
+        <div class="total__price-box">
+          <p class="total__price-info" total="{{totalItems}}">{{totalItems}}</p>
+          <b class="total__price-quantity-value">{{this.value}}</b>
+        </div>
+
+        {{!-- counter box --}}
+        <div class="cart__counter-box" value="{{this.value}}" itemId="{{this.data._id}}">
+
+          {{!-- decrement --}}
+          <button class="cart__product-decrement" type="button" aria-label="remove one item">
+            <svg class="product__icon-decrement" width="16px" height="16px">
+              <use href="../images/sprite.svg#icon-minus"></use>
+            </svg>
+          </button>
+
+          {{!-- input --}}
+          <input class="cart__product-value" type="number" value="{{this.value}}" min="1" max="10"
+             aria-label="counter input">
+
+          {{!-- increment --}}
+          <button class="cart__product-increment" type="button" aria-label="add one item">
+            <svg class="product__icon-increment" width="16px" height="16px">
+              <use href="../images/sprite.svg#icon-plus"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      {{!-- btn remove item from the cart --}}
+      <button class="cart__remove-btn" type="button" data-id="{{this.data._id}}" aria-label="button remove select item from the cart">
+        <svg class="cart__remove-icon" width="20" height="20">
+          <use href="../images/sprite.svg#icon-item-cart-remove"></use>
+        </svg>
+      </button>
+    </li>
+    
+    {{/each}}
+  </ul>
+
+  {{!-- btn pay for items --}}
+  <div class="cart__order-box">
+    <p class="total__order">0</p>
+    <button class="btn__order" type="button" aria-label="button order now">Order Now</button>
+  </div>
+</li>

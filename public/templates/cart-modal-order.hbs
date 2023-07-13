@@ -1,0 +1,68 @@
+<form class="order__form" aria-label="cart modal window to pay your product">
+
+  <label class="order__label" for="reservation">
+    <p class="order__text">Reservation</p>
+    <input class="order__input visually-hidden" type="checkbox" id="reservation" name="reservation" aria-label="reserv your product">
+    <svg class="order__icon-checked">
+      <use href="./images/sprite.svg#icon-input-checked"></use>
+    </svg>
+    <svg class="order__icon-done">
+      <use href="./images/sprite.svg#icon-input-done"></use>
+    </svg>
+  </label>
+
+  <label class="order__label" for="delivery">
+    <p class="order__text">Delivery</p>
+    <input class="order__input visually-hidden" type="checkbox" id="delivery" name="delivery" aria-label="delivery">
+    <svg class="order__icon-checked">
+      <use href="./images/sprite.svg#icon-input-checked"></use>
+    </svg>
+    <svg class="order__icon-done">
+      <use href="./images/sprite.svg#icon-input-done"></use>
+    </svg>
+  </label>
+
+
+  <div class="delivery__text-box">
+    <div class="delivery__title-box">
+      <b class="delivery__title-text">Nova Poshta</b>
+      <svg class="delivery__title-icon">
+        <use href="./images/sprite.svg#icon-novaposhta"></use>
+      </svg>
+    </div>
+    <div class="delivery__description-box">
+      <p class="delivery__description-text">Write your address in UA language</p>
+    </div>
+  </div>
+
+  <div class="delivery__label-box">
+    <label class="order__delivery-label">
+      <input class="order__delivery-input" type="text" placeholder="Your city" aria-label="select your city">
+      <svg class="order__delivery-input-icon">
+        <use href="./images/sprite.svg#icon-done-cart"></use>
+      </svg>
+    </label>
+    
+    <label class="order__delivery-label-box">
+      <input class="order__delivery-input-post-number" type="text" placeholder="Post office number" aria-label="select post office number">
+      <svg class="order__delivery-input-post-icon">
+        <use href="./images/sprite.svg#icon-done-cart"></use>
+      </svg>
+    </label>
+  </div>
+
+  <p class="order__address-text"></p>
+
+  <select class="order__payment-method">
+    <option value="" disabled selected hidden>Payment Method</option>
+    <option class="order__paymnet-option" value="cash-on-delivery">Pay for shipping</option>
+    <option class="order__paymnet-option" value="payment-on-delivery">Payment upon receipt</option>
+  </select>
+
+  <button class="modal__order-btn" type="submit" aria-label="pay for product button">
+    <p class="modal__order-btn-pay-text">PAY</p>
+    <svg class="modal__order-btn-pay-icon">
+      <use href="./images/sprite.svg#icon-loading"></use>
+    </svg>
+  </button>
+</form>
