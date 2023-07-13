@@ -2,7 +2,7 @@ import express from 'express'
 import mongoose from 'mongoose'
 import 'dotenv/config'
 
-import Account from '../models/account.js'
+import Account from './db/models/account.js'
 
 import hbs from './hbs/hbs.js'
 
