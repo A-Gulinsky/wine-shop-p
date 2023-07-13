@@ -7,7 +7,7 @@
 </h3>
 
 <img align="right"
-src="https://res.cloudinary.com/dfbj7kdvy/image/upload/v1689288040/deco-photo-removebg-preview_2_bb2wsy.png" alt="Wine Shop Logo">
+src="https://res.cloudinary.com/dfbj7kdvy/image/upload/v1689288420/deco-photo-removebg-preview_2_xa8kxn.png" alt="Wine Shop Logo">
 
 <h3 align='center' style="color:#2C8AE8">
   The assembly consists of
