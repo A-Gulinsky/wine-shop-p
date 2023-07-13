@@ -9,10 +9,6 @@
   padding-top: 20px;
   padding-bottom: 20px;
 
-  @media screen and (max-width: 660px) {
-    flex-direction: column;
-    gap: 20px;
-  }
 }
 
 
@@ -25,7 +21,7 @@
 }
 
 .cart__info-item-title {
-  font-size: 28px;
+  font-size: 26px;
 }
 
 .cart__info-item-icon {
