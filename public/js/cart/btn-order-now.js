@@ -47,6 +47,8 @@ async function orderNow() {
     return
   }
 
+  Notiflix.Notify.info(`Data from paypal and moderator account can be found in readme.md (GitHub)`)
+
   // modal open
   modalWindow.classList.add('modal__pay')
   modalInfo.innerHTML = '';
