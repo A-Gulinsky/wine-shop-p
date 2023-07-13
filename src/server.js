@@ -6,6 +6,8 @@ import Account from './db/models/account.js'
 
 import hbs from './hbs/hbs.js'
 
+import routerController from './controller/routers-controller.js'
+
 const app = express()
 
 const PORT = process.env.PORT || 3000
@@ -29,19 +31,7 @@ const connectDB = async () => {
 
 }
 
-app.get('/', (req, res) => {
-  res.render(`index`)
-})
-
-app.get(`/accounts`, async (req, res) => {
-  const book = await Account.find();
-
-  if (book) {
-    res.json(book)
-  } else {
-    res.send(`Something went wrong`)
-  }
-})
+app.use(routerController)
 
 connectDB().then(() => {
   app.listen(PORT, () => {
