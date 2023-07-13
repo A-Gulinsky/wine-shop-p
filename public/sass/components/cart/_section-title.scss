@@ -1,0 +1,28 @@
+.cart__title {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.container {}
+
+.cart__title-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.cart__title-text {
+  color: white;
+  font-size: 40px;
+}
+
+.cart__title-icon {
+  fill: white;
+  width: 40px;
+  height: 40px;
+}
+
+.items {
+  padding-bottom: 40px;
+}

@@ -1,0 +1,165 @@
+.delivery__text-box {
+  display: none;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 18%;
+  margin-bottom: 15px;
+}
+
+.delivery__title-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.delivery__title-text {
+  color: white;
+  font-size: 24px;
+}
+
+.delivery__title-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.delivery__description-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delivery__description-text {
+  color: white;
+  text-align: center;
+}
+
+.delivery__label-box {
+  display: none;
+}
+
+.order__delivery-label {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  width: 180px;
+
+  margin-bottom: 15px;
+}
+
+
+
+.order__delivery-input {
+  padding: 5px 10px;
+  
+  width: 170px;
+
+  color: rgb(211, 229, 251);
+
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px 2px #4ea0f6;
+
+  outline: transparent;
+
+  &::placeholder {
+    color: rgb(211, 229, 251);
+    filter: drop-shadow(0px 0px 5px #4ea0f6);
+  }
+}
+
+.order__delivery-input-icon,
+.order__delivery-input-post-icon {
+  position: absolute;
+  display: none;
+  top: 6px;
+  right: 12px;
+
+  width: 20px;
+  height: 20px;
+  fill: rgb(211, 229, 251);
+  filter: drop-shadow(0px 0px 5px #4ea0f6);
+}
+
+.order__delivery-label-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  width: 180px;
+
+  margin-bottom: 10px;
+}
+
+.order__delivery-input-post-number {
+  display: none;
+
+  width: 170px;
+
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px 10px;
+
+  color: rgb(211, 229, 251);
+  
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 4px;
+  
+  box-shadow: 0px 0px 5px 2px #4ea0f6;
+  outline: transparent;
+
+  &::placeholder {
+    color: rgb(211, 229, 251);
+    filter: drop-shadow(0px 0px 5px #4ea0f6);
+  }
+}
+
+.order__address-text {
+  margin-bottom: 15px;
+
+  color: white;
+
+  text-align: center;
+}
+
+.order__payment-method {
+  display: none;
+
+  padding: 10px 15px;
+
+  border-radius: 4px;
+  background-color: transparent;
+  border: 1px solid rgb(211, 229, 251);
+  box-shadow: 0px 0px 5px 2px #4ea0f6;
+
+  color: rgb(211, 229, 251);
+}
+
+.order__paymnet-option {
+  margin-bottom: 35px;
+
+  background-color: transparent;
+  border: 1px solid rgb(211, 229, 251);
+  color: rgb(211, 229, 251);
+}
+
+.order__payment-method option:checked {
+  background-color: transparent;
+  border: 1px solid rgb(211, 229, 251);
+  color: rgb(211, 229, 251);
+}

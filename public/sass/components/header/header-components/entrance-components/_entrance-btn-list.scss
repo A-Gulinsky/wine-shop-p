@@ -1,0 +1,35 @@
+.entrance__btn-list {
+  display: flex;
+  gap: 5px;
+
+  @media screen and (min-width:780px) and (max-width: 940px) {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+.entrance__sign-in,
+.entrance__sign-up {
+  display: flex;
+  gap: 8px;
+
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: white;
+  padding: 5px;
+
+  cursor: pointer;
+
+  transition: 200ms;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.02);
+  }
+}
+
+.entrance__icon {
+  fill: white;
+  width: 20px;
+  height: 20px;
+}

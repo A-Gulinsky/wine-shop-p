@@ -1,0 +1,46 @@
+.modal__order-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: auto;
+  margin-bottom: 20px;
+  padding: 5px 10px;
+
+  width: 150px;
+  height: 34px;
+
+  color: white;
+
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 4px;
+
+  transition: 250ms;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.953);
+  }
+
+  @media screen and (max-width: 660px) {
+    margin-top: auto;
+  }
+}
+
+.modal__order-btn-pay-text {}
+
+.modal__order-btn-pay-icon {
+  display: none;
+
+  fill: white;
+  width: 22px;
+  height: 22px;
+
+  animation-name: status-loading;
+  animation-duration: 1200ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal;
+}

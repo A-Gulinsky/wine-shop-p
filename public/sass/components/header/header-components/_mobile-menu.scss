@@ -1,0 +1,293 @@
+
+
+.navbar__btn {
+  position: relative;
+
+  display: none;
+
+  width: 50px;
+  height: 30px;
+
+  background-color: transparent;
+  border: none;
+  order: 1;
+    
+  cursor: pointer;
+
+  @media screen and (max-width: 779px) {
+    display: inline-block;
+  }
+}
+
+.navbar__btn-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: #FFFFFF;
+    border-radius: 15px;
+
+    transition: .3s ease;
+}
+
+.navbar__btn-line:nth-child(1) {
+    top: 5px;
+}
+
+.navbar__btn-line:nth-child(2) {
+    top: 15px;
+}
+
+.navbar__btn-line:nth-child(3) {
+    top: 15px;
+}
+
+.navbar__btn-line:nth-child(4) {
+    top: 25px;
+}
+
+.navbar_menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(101%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 10px;
+
+  width: 50vw;
+  height: 60vw;
+
+  
+  background-color: #000000de;
+  border-left: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  border-bottom-left-radius: 6px;
+
+  z-index: 10;
+
+  overflow-y: scroll;
+  
+  transition: .3s ease;
+  
+
+  @media screen and (orientation: landscape) and (max-height: 450px) {
+    height: 100%;
+  }
+
+  @media screen and (max-width: 660px) {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  @media screen and (max-width: 779px) {
+  }
+}
+
+.mobile__nav-list {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.mobile__nav-item {
+  display: flex;
+  flex-grow: 1;
+
+  &--first-child {
+    justify-content: flex-start;
+  }
+
+  &-test {
+    justify-content: center;
+    align-items: end;
+  }
+
+  &--last-child {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.mobile__entrance-box {
+  text-align: center;
+}
+
+.navbar__btn-close {
+  display: block;
+
+  margin-left: auto;
+
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+.navbar__icon-close {
+  fill: white;
+}
+
+.mobile-entrance__sign-up {
+  display: inline-block;
+
+  margin-top: 15px;
+  margin-right: 10px;
+  padding: 5px;
+
+  width: 100px;
+
+  color: white;
+
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+
+.mobile-entrance__sign-in {
+  display: inline-block;
+
+  padding: 5px;
+  margin-top: 15px;
+
+  width: 100px;
+
+  color: white;
+
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+
+// contacts
+
+.mobile__contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile__contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.mobile__contacts-item {
+
+}
+
+.mobile__contacts-link {
+  font-style: normal;
+  text-decoration: none;
+  color: white;
+}
+
+// social
+
+.social {
+}
+
+.social__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.social__item {}
+
+.social__contacts-link {
+  font-style: normal;
+  text-decoration: none;
+  color: white;
+}
+
+.social__contacts-icon {
+  fill: white;
+}
+
+// if user
+
+.mobile__user-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile__user-elements-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.mobile__user-elements-item {}
+
+.mobile__user-elements-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobile__username {
+  font-size: 20px;
+  color: white;
+}
+
+.mobile__username-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  padding: 5px 10px;
+
+  border: 1px solid white;
+  border-radius: 6px;
+
+  list-style: none;
+  text-decoration: none;
+}
+
+.mobile__user-cart-text {
+  font-size: 24px;
+  color: white;
+}
+
+.mobile__user-cart-icon {
+  fill: white;
+}
+
+.mobile-entrance__exit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  width: 110px;
+
+  padding: 5px 10px;
+
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+.mobile__exit-text {
+  font-size: 20px;
+  color: white;
+}
+
+.mobile__exit-icon {
+  fill: white;
+}

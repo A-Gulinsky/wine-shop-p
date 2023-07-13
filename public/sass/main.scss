@@ -1,0 +1,24 @@
+@import './base/normalize';
+@import './base/globalsettings';
+@import './base/patterns';
+
+//animations
+@import './animations/btn-add-to-cart.scss';
+
+// MAIN
+@import './components/main/main-page.scss';
+
+// ARTICLE
+@import './components/article/article.scss';
+
+// CART
+@import './components/cart/cart.scss';
+
+// moderator Panel
+@import './components/orders/order';
+
+// FOOTER
+@import './components/footer/footer.scss';
+
+// modal
+@import './components/modal/modal.scss';

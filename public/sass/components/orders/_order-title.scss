@@ -1,0 +1,39 @@
+
+.orders-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url('../images/orders-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.orders__title-section {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.container {}
+
+.orders__title-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.orders__title {
+  font-size: 34px;
+  color: white;
+}
+
+.orders__title-icon {
+  width: 34px;
+  height: 34px;
+
+  fill: white;
+}

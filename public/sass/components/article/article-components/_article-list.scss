@@ -1,0 +1,434 @@
+
+.article__page-title {
+  padding-top: 5px;
+  padding-bottom: 35px;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  text-align: center;
+}
+
+.article__title-text {
+  font-size: 34px;
+  color: white;
+}
+
+.article__title-icon {
+  fill: white;
+  width: 34px;
+  height: 34px;
+}
+
+.article__info-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+
+  width: 750px;
+
+  background-color: rgba(17, 17, 17, 0.876);
+  border-radius: 4px;
+  box-shadow: 0px 0px 8px 2px #ffffff;
+
+  @media screen and (max-width: 780px) {
+    width: 700px;
+  }
+
+  @media screen and (max-width: 729px) {
+    width: 90%;
+  }
+
+  @media screen and (min-width: 390px) and (max-width: 590px) {
+    width: 80%;
+  }
+}
+
+.article__info-item {
+  position: relative;
+
+  cursor: default;
+
+  &--first-child {
+      width: 100%;
+    }
+
+  @media screen and (min-width: 730px) {
+
+  &--germany {
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 41px;
+      right: 8px;
+
+      width: 4px;
+      height: 80%;
+
+      background-color: #d7e6f7;
+      border-radius: 6px;
+      box-shadow: 0px 0px 8px 2px #4ea0f6;
+    }
+  }
+
+  &--italy {
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 43px;
+      right: 50%;
+      transform: translateX(50%);
+
+      width: 4px;
+      height: 30px;
+
+      background-color: #d7e6f7;
+      box-shadow: 0px 0px 8px 2px #4ea0f6;
+      border-radius: 6px;
+    }
+  }
+
+  &--france {
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 41px;
+      left: 8px;
+
+      width: 4px;
+      height: 80%;
+
+      background-color: #d7e6f7;
+      box-shadow: 0px 0px 8px 2px #4ea0f6;
+      border-radius: 6px;
+      
+    }
+  }
+  }
+  
+  @media screen and (max-width: 729px) {
+    
+    &--germany {
+      padding: 40px 20px;
+
+      border-radius: 4px;
+      border: 1px solid #d7e6f7;
+      box-shadow: 0px 0px 8px 2px #4ea0f6;
+    }
+
+    &--italy {
+      padding: 40px 20px;
+
+      border: 1px solid #d7e6f7;
+      box-shadow: 0px 0px 8px 2px #4ea0f6;
+      border-radius: 4px;
+    }
+
+    &--france {
+      padding: 40px 20px;
+
+      border: 1px solid #d7e6f7;
+      box-shadow: 0px 0px 8px 2px #4ea0f6;
+      border-radius: 4px;
+    }
+  }
+
+}
+
+.article__info-box {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  padding: 8px 12px;
+
+  border: 1px solid white;
+  border-radius: 4px;
+
+  transition: 200ms;
+
+  &:hover,
+  &:focus {
+    border-color: #d7e6f7;
+    box-shadow: 0px 0px 8px 2px #4ea0f6;
+  }
+
+  &--first-child {
+    width: 150px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 730px) {
+    &--first-child {
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 41px;
+      right: 65px;
+
+      height: 44px;
+      width: 4px;
+
+      background-color: #d7e6f7;
+      border-radius: 6px;
+      box-shadow: 0px 0px 8px 2px #4ea0f6;
+    }
+  }
+
+  // germany
+
+  &--germany {
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -58px;
+      right: -21px;
+
+      width: 4px;
+      height: 62px;
+      
+      background-color: #d7e6f7;
+      border-radius: 6px;
+      box-shadow: 0px 0px 8px 2px #4ea0f6;
+
+      rotate: 38deg;
+    }
+  }
+
+  &--riesling {
+    transform: translateX(-30px);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      right: -20px;
+
+      width: 16px;
+      height: 4px;
+
+      background-color: #d7e6f7;
+      border-radius: 6px;
+      box-shadow: 0px 0px 8px 2px #4ea0f6;
+    }
+  }
+
+  &--pinot-noir {
+    transform: translateX(-50px);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      right: -40px;
+
+      width: 35px;
+      height: 4px;
+
+      background-color: #d7e6f7;
+      border-radius: 6px;
+      box-shadow: 0px 0px 8px 2px #4ea0f6;
+    }
+  }
+
+  &--gewurztraminer {
+    transform: translateX(-70px);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      right: -60px;
+
+      width: 55px;
+      height: 4px;
+
+      background-color: #d7e6f7;
+      border-radius: 6px;
+      box-shadow: 0px 0px 8px 2px #4ea0f6;
+    }
+  }
+
+  // italy
+  &--sangiovese {
+      
+    &::before {
+      content: '';
+      position: absolute;
+      top: 41px;
+      right: 50%;
+      transform: translateX(50%);
+
+      width: 4px;
+      height: 16px;
+
+      background-color: #d7e6f7;
+      border-radius: 6px;
+      box-shadow: 0px 0px 8px 2px #4ea0f6;
+    }
+  }
+
+  &--nebbiolo {
+     &::before {
+      content: '';
+      position: absolute;
+      top: 41px;
+      right: 50%;
+      transform: translateX(50%);
+
+      width: 4px;
+      height: 16px;
+
+      background-color: #d7e6f7;
+      border-radius: 6px;
+      box-shadow: 0px 0px 8px 2px #4ea0f6;
+    }
+  }
+
+  // france
+  &--france {
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -62px;
+      left: -26px;
+
+      width: 4px;
+      height: 68px;
+
+      background-color: #d7e6f7;
+      border-radius: 6px;
+      box-shadow: 0px 0px 8px 2px #4ea0f6;
+      
+      rotate: -42deg;
+    }
+  }
+
+  &--chardonnay {
+    transform: translate(30px);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: -20px;
+
+      width: 16px;
+      height: 4px;
+
+      background-color: #d7e6f7;
+      border-radius: 6px;
+      box-shadow: 0px 0px 8px 2px #4ea0f6;
+    }
+  }
+
+  &--cabernet {
+    transform: translate(50px);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: -40px;
+
+      width: 35px;
+      height: 4px;
+
+      background-color: #d7e6f7;
+      border-radius: 6px;
+      box-shadow: 0px 0px 8px 2px #4ea0f6;
+    }
+  }
+
+  &--merlot {
+    transform: translate(70px);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: -60px;
+
+      width: 55px;
+      height: 4px;
+
+      background-color: #d7e6f7;
+      border-radius: 6px;
+      box-shadow: 0px 0px 8px 2px #4ea0f6;
+    }
+  }
+  }
+}
+
+.article__info-text {
+  color: white;
+
+  &--gewurztraminer {
+    font-size: 14px;
+  }
+
+  &--montepulciano {
+    font-size: 12px;
+  }
+}
+
+.article__info-item-icon {
+  fill: white;
+  width: 22px;
+  height: 22px;
+}
+
+.grape-sort__list {
+  position: relative;
+
+  margin-top: 35px;
+
+  &--germany {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+  }
+
+  &--france {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+  }
+
+  &--italy {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+  }
+}
+
+.grape-sort__item {
+
+}

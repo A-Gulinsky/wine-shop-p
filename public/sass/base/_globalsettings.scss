@@ -1,0 +1,69 @@
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.basic-main,
+.cart-main,
+.orders-main {
+  position: relative;
+  flex: 1 1 auto;
+}
+
+footer {
+  position: relative;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media screen and (min-width: 1300px) {
+    width: 1270px;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    min-width: 300px;
+    max-width: 737px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Глобальне скидання */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Налаштування для списків */
+ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}

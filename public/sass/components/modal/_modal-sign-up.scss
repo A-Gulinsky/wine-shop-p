@@ -1,0 +1,97 @@
+.modal__sign-up {
+  display: flex;
+
+  background-color: rgba(0, 0, 0, 0.88);
+  border: 1px solid white;
+
+  @media screen and (orientation: landscape) and (max-height: 450px) {
+    padding-bottom: 10px;
+  }
+
+  @media screen and (max-width: 660px) {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.signup__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  @media screen and (max-width: 660px) {
+    flex-grow: 1;
+    justify-content: center;
+  }
+}
+
+.signup__label {
+  display: block;
+
+  margin-bottom: 15px;
+
+  @media screen and (min-width: 661px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+
+    width: 100%;
+    
+    margin-bottom: 10px;
+  }
+
+  @media screen and (orientation: landscape) and (max-height: 450px) {
+    margin-bottom: 5px;
+  }
+}
+
+.signup__label-text {
+  margin-left: auto;
+
+  color: white;
+
+  @media screen and (max-width: 660px) {
+    width: 80px;
+
+    margin-bottom: 3px;
+  }
+}
+
+.sign__up-input {
+  display: block;
+
+  padding: 5px 10px;
+
+  color: white;
+
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 4px;
+
+  outline: transparent;
+
+  &::placeholder {
+    color: white;
+  }
+}
+
+.signup__accept-label {
+  display: flex;
+  gap: 10px;
+  
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.signup__accept-input {}
+
+.signup__accept-text {
+  color: white;
+}
+
+.signup__accept-link {
+  color: orangered;
+}

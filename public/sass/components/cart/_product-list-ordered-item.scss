@@ -1,0 +1,284 @@
+.cart__ordered-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cart__item-ordered {
+  position: relative;
+
+  display: flex;
+  gap: 10px;
+
+  padding: 20px;
+
+  background-color: rgba(17, 17, 17, 0.88);
+  border: 1px solid white;
+  border-radius: 20px;
+
+  width: 540px;
+  height: 220px;
+
+  transition: 150ms ease-in;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.953);
+  }
+
+  @media screen and (max-width: 600px) {
+    flex-wrap: wrap;
+    gap: 10px;
+
+    padding-top: 45px;
+
+    max-width: 250px;
+    min-width: 250px;
+    width: 250px;
+    height: 430px;
+  }
+
+  @media screen and (min-width:460px) and (max-width: 541px) {
+    width: 350px;
+    min-width: 350px;
+    min-width: 350px;
+  }
+}
+
+.cart__order-item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.cart__ordered-item-element {
+  margin-top: 80px;
+
+  @media screen and (max-width: 600px) {
+    margin-top: 0;
+  }
+}
+
+.reservation {
+  background-color: rgba(0, 119, 255, 0.29);
+}
+
+.shipment {
+  background-color: #ed2f0d3a;
+}
+
+.cart__order-status-box {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 5px;
+
+  height: 30px;
+
+  border: 1px solid white;
+  border-radius: 8px;
+
+  &--shipment {
+    box-shadow: 0px 0px 5px 2px rgba(236, 34, 3, 0.87);
+    background-color: rgba(255, 34, 0, 0.292);
+  }
+
+  &--reservation {
+    background-color: rgba(0, 89, 255, 0.292);
+    box-shadow: 0px 0px 5px 2px rgba(0, 89, 255, 0.87);
+  }
+}
+
+.cart__order-status {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.cart__order-status-icon {}
+
+.cart__order-status-icon--reserved {
+  fill: white;
+  width: 20px;
+  height: 20px;
+}
+
+.cart__info-status-text-box {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 2px;
+  padding-left: 10px;
+
+  border: 1px solid white;
+  border-right: 1px solid transparent;
+  border-radius: 5px;
+
+  &--reservation {
+    background-color: rgba(0, 89, 255, 0.152);
+    box-shadow: 0px 0px 5px 2px rgba(0, 89, 255, 0.87);
+  }
+
+  &--shipment {
+    background-color: rgba(255, 47, 0, 0.152);
+    box-shadow: 0px 0px 5px 2px rgba(236, 34, 3, 0.87);
+  }
+
+  @media screen and (max-width: 600px) {
+
+    &--reservation,
+    &--shipment {
+      position: static;
+      width: 100%;
+      border-right: 1px solid white;
+    }
+  }
+
+  @media screen and (min-width: 460px) and (max-width: 541px) {
+
+    &--reservation,
+    &--shipment {
+      position: static;
+
+      margin-left: auto;
+      margin-right: auto;
+
+      width: 280px;
+
+      border-right: 1px solid white;
+    }
+  }
+}
+
+.order__number-box {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+
+  display: flex;
+  gap: 5px;
+
+  padding: 5px;
+
+  height: 30px;
+
+  border: 1px solid white;
+  border-radius: 6px;
+
+  &--reservation {
+    background-color: rgba(0, 89, 255, 0.292);
+    box-shadow: 0px 0px 5px 2px rgba(0, 89, 255, 0.87);
+  }
+
+  &--shipment {
+    box-shadow: 0px 0px 5px 2px rgba(236, 34, 3, 0.87);
+    background-color: rgba(255, 34, 0, 0.292);
+  }
+
+  @media screen and (max-width: 600px) {
+    top: 8px;
+    left: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 118px;
+
+    transform: translate(0);
+    
+  }
+}
+
+.order__number-text {
+  @media screen and (max-width: 600px) {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+}
+
+.order__number-value {
+
+  font-weight: 600;
+
+  &--reservation {
+    color: rgb(127, 196, 249);
+  }
+
+  &--shipment {
+    color: #fa9a9a;
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 13px;
+  }
+}
+
+.cart__info-status {
+
+  &--reservation,
+  &--shipment {
+    @media screen and (max-width: 600px) {
+      font-size: 11px;
+      white-space: nowrap;
+    }
+
+    @media screen and (min-width: 460px) and (max-width: 541px) {
+      font-size: 16px;
+      white-space: nowrap;
+    }
+  }
+}
+
+.cart__info-status-icon {
+  width: 20px;
+  height: 20px;
+
+
+  animation-name: status-loading;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal;
+
+}
+
+@keyframes status-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+
+.cart__ordered-item-img {
+  &--reservation {
+    filter: drop-shadow(0px 0px 8px rgb(0, 170, 255));
+  }
+
+  &--shipment {
+    filter: drop-shadow(0px 0px 8px rgba(240, 151, 7, 0.771));
+  }
+}

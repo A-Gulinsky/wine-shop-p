@@ -1,0 +1,14 @@
+.cart-background {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0,0,0,0.804);
+    background-image: url(../images/main-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

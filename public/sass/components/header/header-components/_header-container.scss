@@ -1,0 +1,21 @@
+.header__container {
+  position: relative;
+
+  display: flex;
+
+  padding: 15px;
+  border-bottom: 1px solid #7d7d7d;
+
+  background-color: rgba(17, 17, 17, 0.476);
+
+  // mob
+  // tab/desktop
+  @media screen and (max-width: 660px) {
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 661px) {
+    justify-content: space-between;
+    align-items: center;
+  }
+}

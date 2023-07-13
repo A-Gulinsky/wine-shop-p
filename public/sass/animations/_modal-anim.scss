@@ -1,0 +1,44 @@
+.modal__sign-up {
+  animation-name: modalAnim;
+  animation-duration: 300ms;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-iteration-count: 1;
+}
+
+.modal__sign-in {
+  animation-name: modalAnim;
+  animation-duration: 300ms;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-iteration-count: 1;
+}
+
+.modal__anim-close {
+  animation-name: modalAnimClose;
+  animation-duration: 300ms;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-iteration-count: 1;
+
+}
+
+@keyframes modalAnim {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes modalAnimClose {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}

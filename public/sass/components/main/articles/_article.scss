@@ -1,0 +1,146 @@
+.article {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.article__container {
+  padding-top: 30px;
+  padding-bottom: 15px;
+
+  background-color: rgba(17, 17, 17, 0.476);
+  border-radius: 4px;
+  border-top: 1px solid #7d7d7d;
+  border-bottom: 1px solid #7d7d7d;
+}
+
+.article__box {
+  margin-bottom: 20px;
+
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/article.jpg);
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-size: cover;
+  border-top: 1px solid #7d7d7d;
+  border-bottom: 1px solid #7d7d7d;
+  border-radius: 4px;
+}
+
+
+
+.article__box {
+  width: 800px;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 10px;
+
+  @media screen and (max-width: 850px) {
+    width: 600px;
+  }
+
+  @media screen and (max-width: 660px) {
+    width: 90%;
+  }
+
+  @media screen and (max-width: 390px) {
+    width: 100%;
+  }
+}
+
+.article__title {
+  font-size: 26px;
+  text-align: center;
+  color: rgb(221, 216, 216);
+
+  @media screen and (max-width: 850px) {
+    font-size: 22px;
+  }
+
+  @media screen and (max-width: 660px) {
+    font-size: 16px;
+  }
+}
+
+.article__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  gap: 10px;
+
+  margin-top: 20px;
+
+  @media screen and (max-width: 480px) {
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+.article__item {}
+
+.article__item-box {
+}
+
+.article__description-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+}
+
+.article__description-title {
+  color: white;
+
+  @media screen and (max-width: 480px) {
+    font-size: 16px;
+  }
+}
+
+.article__description-icon {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+.article__btn-box {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
+
+  margin-left: auto;
+  margin-top: 20px;
+
+  @media screen and (max-width: 480px) {
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 30px;
+  }
+}
+
+.article__btn-text {
+  color: white;
+}
+
+.article__link {
+  padding: 6px 15px;
+
+  color: white;
+  text-decoration: none;
+
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 4px;
+
+  transition: 200ms;
+
+  cursor: default;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 0px 5px white;
+    transform: scale(1.03);
+  }
+}

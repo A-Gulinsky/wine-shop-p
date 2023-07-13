@@ -1,0 +1,49 @@
+
+.contacts {
+  display: none;
+
+  @media screen and (min-width: 780px) {
+    display: block;
+  }
+}
+
+
+.contacts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contacts__item {}
+
+.contacts__link {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+
+  transition: 200ms;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.02);
+  }
+
+  @media screen and (max-width: 970px) {
+    font-size: 12px;
+  }
+}
+
+.contacts__icon {
+  fill: white;
+  width: 22px;
+  height: 22px;
+}
+
+.contacts__text-info {
+  color: white;
+}

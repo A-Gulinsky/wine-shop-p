@@ -1,0 +1,47 @@
+// background cart
+@import './background-cart.scss';
+
+// header
+@import './header-cart.scss';
+
+// main
+
+  // main/ section-title
+  @import './section-title.scss';
+
+  // history cart !!!!!!!!!!!!!!
+  @import './history-section-title.scss';
+  @import './history-cart-list.scss';
+  @import './history-btn-load-more';
+
+  // main /section-product-list
+  // main /product-list-title
+  @import './product-list-title.scss';
+
+  // main / product-list-global-settings
+  @import './section-product-global-settings.scss';
+
+  // main / processed-item
+  @import './product-list-processed-item.scss';
+
+  // main / ordered-item
+  @import './product-list-ordered-item.scss';
+
+  // main / item in queue
+  @import './product-list-item-in-queue.scss';
+
+  // modal pay
+  @import './modal-pay.scss';
+
+  // if cart is empty
+  @import './empty-cart.scss';
+
+
+  // if user error
+  @import './error-user.scss';
+// 
+
+// modal cart
+@import './modal-order-now.scss';
+
+// footer

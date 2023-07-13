@@ -1,0 +1,21 @@
+
+.header__logo {
+
+  color: white;
+
+  @media screen and (max-width: 660px) {
+    margin-right: auto;
+  }
+}
+
+.logo {
+  font-size: 34px;
+  text-decoration: none;
+  color: white;
+
+  filter: drop-shadow(0px 0px 5px #4ea0f6);
+
+  @media screen and (max-width: 460px) {
+    font-size: 26px;
+  }
+}

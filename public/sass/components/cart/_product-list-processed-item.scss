@@ -1,0 +1,124 @@
+.cart__processed-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cart__item-processed {
+  position: relative;
+
+  background-color: rgba(17, 17, 17, 0.88);
+  border: 1px solid white;
+  border-radius: 20px;
+
+  width: 540px;
+  height: 220px;
+
+
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+
+  transition: 150ms ease-in;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.953);
+  }
+
+  @media screen and (max-width: 600px) {
+    flex-wrap: wrap;
+    gap: 10px;
+
+    padding-top: 45px;
+
+    max-width: 250px;
+    min-width: 250px;
+    width: 250px;
+    height: 430px;
+  }
+
+  @media screen and (min-width:460px) and (max-width: 541px) {
+    width: 350px;
+    min-width: 350px;
+    min-width: 350px;
+  }
+}
+
+.cart__processed-info-status-icon {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
+.cart__processed-info-status-text-box {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 2px;
+  padding-left: 10px;
+
+  border: 1px solid white;
+  border-right: 1px solid transparent;
+  border-radius: 5px;
+
+  &--reservation {
+    background-color: rgba(0, 89, 255, 0.152);
+    box-shadow: 0px 0px 5px 2px rgba(0, 89, 255, 0.87);
+  }
+
+  &--shipment {
+    background-color: rgba(255, 47, 0, 0.152);
+    box-shadow: 0px 0px 5px 2px rgba(236, 34, 3, 0.87);
+  }
+
+  @media screen and (max-width: 600px) {
+    margin-left: auto;
+    margin-right: auto;
+
+    &--reservation,
+    &--shipment {
+      position: static;
+      border-right: 1px solid white;
+    }
+  }
+
+  @media screen and (min-width: 460px) and (max-width: 541px) {
+
+    &--reservation,
+    &--shipment {
+      position: static;
+
+      margin-left: auto;
+      margin-right: auto;
+
+      width: 280px;
+
+
+      border-right: 1px solid white;
+    }
+  }
+}
+
+.cart__info-status-processed {
+  box-shadow: 0px 0px 5px 2px rgba(236, 34, 3, 0.87);
+
+  &--reservation {
+    box-shadow: 0px 0px 5px 2px rgba(0, 89, 255, 0.87);
+  }
+
+  @media screen and (max-width: 600px) {
+    width: auto;
+    
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

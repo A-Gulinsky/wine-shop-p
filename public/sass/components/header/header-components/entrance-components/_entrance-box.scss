@@ -1,0 +1,10 @@
+.entrance__box {
+  display: none;
+
+  @media screen and (min-width: 780px) {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+}

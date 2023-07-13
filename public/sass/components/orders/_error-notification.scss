@@ -1,0 +1,41 @@
+.order__error {
+}
+
+.order__error-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  width: 70%;
+  
+  background-color: rgba(17, 17, 17, 0.838);
+}
+
+.order__error-title {
+  color: white;
+
+  font-size: 32px;
+
+  @media screen and (max-width: 500px) {
+    font-size: 24px;
+  }
+}
+
+.order__error-icon {
+  width: 34px;
+  height: 34px;
+
+  fill: white;
+
+  @media screen and (max-width: 500px) {
+    width: 26px;
+    height: 26px;
+  }
+}

@@ -1,0 +1,24 @@
+.cart__empty-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  padding-top: 40px;
+  padding-bottom: 40px;
+  gap: 10px;
+}
+
+.cart__empty-text {
+  font-size: 32px;
+
+  @media screen and (max-width: 450px) {
+    font-size: 24px;
+  }
+}
+
+.cart__empty-icon {
+  width: 28px;
+  height: 28px;
+  fill: white;
+
+}

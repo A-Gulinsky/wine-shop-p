@@ -1,0 +1,44 @@
+.entrance__box-logout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.entrance__box-name {
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.exit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  padding: 5px;
+
+  background-color: transparent;
+  border: 1px solid transparent;
+  outline: transparent;
+
+  transition: 200ms;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.02);
+  }
+}
+
+.exit__btn-box {}
+
+.exit__btn-text {
+  color: white;
+}
+
+.exit__btn-icon {
+  width: 22px;
+  height: 22px;
+  fill: white;
+}

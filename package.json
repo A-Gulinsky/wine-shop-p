@@ -5,7 +5,7 @@
   "type": "module",
   "main": "src/server.js",
   "scripts": {
-    "sass:compile": "node-sass public/scss -o public/css",
+    "sass:compile": "node-sass public/sass/main.scss -o public/css/ --output-style compressed",
     "sass:watch": "node-sass public/scss -o public/css --watch"
   },
   "keywords": [],
