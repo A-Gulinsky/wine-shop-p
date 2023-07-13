@@ -6,13 +6,8 @@
   <a href="https://wine-shop-zhytomyr.cyclic.app/" target="_blank" rel="noopener noreferrer">wine-shop-zhytomyr.cyclic.app</a>
 </h3>
 
-<div style="display:flex;justify-content:center;align-items:center;">
-  <h4 style="text-align:center">
-    <span style="color: #2C8AE8;">Wine Shop</span> is a project that is an online wine store. It is a complete web application developed using many web development technologies.
-  </h4>
-  <img src="https://res.cloudinary.com/dfbj7kdvy/image/upload/v1689264050/deco-photo-removebg-preview_cszvoi.png" alt="Wine Shop Logo">
-</div>
-
+<img align="center"
+src="https://res.cloudinary.com/dfbj7kdvy/image/upload/v1689288040/deco-photo-removebg-preview_2_bb2wsy.png" alt="Wine Shop Logo">
 <h3 align='center' style="color:#2C8AE8">
   The assembly consists of
 </h3>
