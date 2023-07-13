@@ -33,14 +33,6 @@ app.get('/', (req, res) => {
   res.render(`index`)
 })
 
-// app.get(`/add-note`, async (req, res) => {
-//   try {
-//     await Account.insertMany([
-
-//     ])
-//   }
-// })
-
 app.get(`/accounts`, async (req, res) => {
   const book = await Account.find();
 
