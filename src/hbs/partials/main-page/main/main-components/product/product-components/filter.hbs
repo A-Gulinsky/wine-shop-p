@@ -1,0 +1,134 @@
+<form class="filter__form" id="filter-form" method="post" action="/wines" aria-label="wine search by filter">
+  
+  {{!-- title --}}
+  <h2 class="filter__main-title">Filter</h2>
+
+  {{!-- color --}}
+  <h3 class="filter__item-title">Color:</h3>
+  <ul class="filter__color-list">
+    <li class="filter__color-item">
+      <label class="filter__color-label filter__color-label--red">
+        <b class="filter__color-title filter__color-title--red">Red</b>
+        <input class="filter__color-input visually-hidden" type="checkbox" name="color" value="red" aria-label="checkbox  red wine">
+        <svg class="filter__color-icon-checked" width="18" height="18">
+          <use href="/images/sprite.svg#icon-input-checked"></use>
+        </svg>
+        <svg class="filter__color-icon-done" width="16" height="16">
+          <use href="/images/sprite.svg#icon-input-done"></use>
+        </svg>
+      </label>
+    </li>
+    <li class="filter__color-item">
+      <label class="filter__color-label filter__color-label--white">
+        <b class="filter__color-title filter__color-title--white">White</b>
+        <input class="filter__color-input visually-hidden" type="checkbox" name="color" value="white" aria-label="checkbox white wine">
+        <svg class="filter__color-icon-checked" width="18" height="18">
+          <use href="/images/sprite.svg#icon-input-checked"></use>
+        </svg>
+        <svg class="filter__color-icon-done" width="16" height="16">
+          <use href="/images/sprite.svg#icon-input-done"></use>
+        </svg>
+      </label>
+    </li>
+    <li class="filter__color-item">
+      <label class="filter__color-label filter__color-label--rose">
+        <b class="filter__color-title filter__color-title--rose">Rose</b>
+        <input class="filter__color-input visually-hidden" type="checkbox" name="color" value="rose" aria-label="checkbox rose wine">
+        <svg class="filter__color-icon-checked" width="18" height="18">
+          <use href="/images/sprite.svg#icon-input-checked"></use>
+        </svg>
+        <svg class="filter__color-icon-done" width="16" height="16">
+          <use href="/images/sprite.svg#icon-input-done"></use>
+        </svg>
+      </label>
+    </li>
+  </ul>
+
+  {{!-- price --}}
+  <h3 class="filter__item-title">Price:</h3>
+  <ul class="filter__price">
+    <li class="filter__price-item">
+      <label class="filter__price-label filter__price-label--first-child">
+        <input class="filter__price-input" maxlength="5" type="number" name="minPrice" placeholder="min" aria-label="input min price">
+      </label>
+    </li>
+    <li class="filter__price-item">
+      <label class="filter__price-label">
+        <input class="filter__price-input" maxlength="5" type="number" name="maxPrice" placeholder="max" aria-label="input max price">
+      </label>
+    </li>
+  </ul>
+
+  {{!-- year --}}
+  <h3 class="filter__item-title">Year:</h3>
+  <ul class="filter__year">
+    <li class="filter__year-item">
+      <label class="filter__year-label filter__year-label--first-child ">
+        <input class="filter__year-input" maxlength="4" type="number" name="minYear" placeholder="min" aria-label="input min year">
+      </label>
+    </li>
+    <li class="filter__year-item">
+      <label class="filter__year-label">
+        <input class="filter__year-input" maxlength="4" type="number" name="maxYear" placeholder="max" aria-label="input max year">
+      </label>
+    </li>
+  </ul>
+
+  {{!-- country --}}
+  <h3 class="filter__item-title">Country :</h3>
+  <ul class="filter__country">
+    <li class="filter__country-item">
+      <label class="filter__country-label filter__country-label--italy">
+        <b class="filter__country-title">Italy</b>
+        <svg class="filter__country-deco-icon">
+          <use href="./images/sprite.svg#icon-italy-flag"></use>
+        </svg>
+        <input class="filter__country-input visually-hidden" type="checkbox" name="country" value="Italy" aria-label="select country Italy">
+        <svg class="filter__color-icon-checked" width="18" height="18">
+          <use href="/images/sprite.svg#icon-input-checked"></use>
+        </svg>
+        <svg class="filter__color-icon-done" width="16" height="16">
+          <use href="/images/sprite.svg#icon-input-done"></use>
+        </svg>
+      </label>
+    </li>
+    <li class="filter__country-item">
+      <label class="filter__country-label filter__country-label--germany">
+        <b class="filter__country-title filter__country-title--germany">Germany</b>
+        <svg class="filter__country-deco-icon">
+          <use href="./images/sprite.svg#icon-germany-flag"></use>
+        </svg>
+        <input class="filter__country-input visually-hidden" type="checkbox" name="country" value="Germany" aria-label="select country Germany">
+        <svg class="filter__color-icon-checked" width="18" height="18">
+          <use href="/images/sprite.svg#icon-input-checked"></use>
+        </svg>
+        <svg class="filter__color-icon-done" width="16" height="16">
+          <use href="/images/sprite.svg#icon-input-done"></use>
+        </svg>
+      </label>
+    </li>
+    <li class="filter__country-item">
+      <label class="filter__country-label filter__country-label--france">
+        <b class="filter__country-title filter__country-title--france">France</b>
+        <svg class="filter__country-deco-icon">
+          <use href="./images/sprite.svg#icon-france-flag"></use>
+        </svg>
+        <input class="filter__country-input visually-hidden" type="checkbox" name="country" value="France" aria-label="select country France">
+        <svg class="filter__color-icon-checked" width="18" height="18">
+          <use href="/images/sprite.svg#icon-input-checked"></use>
+        </svg>
+        <svg class="filter__color-icon-done" width="16" height="16">
+          <use href="/images/sprite.svg#icon-input-done"></use>
+        </svg>
+      </label>
+    </li>
+  </ul>
+
+  {{!-- btn submit --}}
+  <button class="filter__btn-submit" type="submit" aria-label="button to filter by selected criteria">
+    <p class="filter__btn-submit-text">Filter</p>
+    <svg class="filter__btn-submit-icon">
+      <use href="./images/sprite.svg#icon-loading"></use>
+    </svg>
+  </button>
+</form>

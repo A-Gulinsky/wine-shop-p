@@ -1,0 +1,22 @@
+<section class="product">
+  <div class="container">
+
+    <div class="product__title-box">
+      <h2 class="product__title-text">Our products</h2>
+      <svg class="product__title-icon">
+        <use href="./images/sprite.svg#icon-product-shop"></use>
+      </svg>
+    </div>
+
+    <div class="product__box">
+      <div class="product__box-left">
+        {{!-- filter --}}
+        {{> main-page/main/main-components/product/product-components/filter}}
+      </div>
+      <div class="product__box-right">
+        {{!-- render product cards --}}
+        {{> main-page/main/main-components/product/product-components/render}}
+      </div>
+    </div>
+  </div>
+</section>
