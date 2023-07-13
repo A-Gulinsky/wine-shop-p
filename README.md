@@ -6,10 +6,10 @@
   <a href="https://wine-shop-zhytomyr.cyclic.app/" target="_blank" rel="noopener noreferrer">wine-shop-zhytomyr.cyclic.app</a>
 </h3>
 
-<img align="right"
+<img align="center"
 src="https://res.cloudinary.com/dfbj7kdvy/image/upload/v1689288420/deco-photo-removebg-preview_2_xa8kxn.png" alt="Wine Shop Logo">
 
-<h3 align='center' style="color:#2C8AE8">
+<h3 align='center'>
   The assembly consists of
 </h3>
 
