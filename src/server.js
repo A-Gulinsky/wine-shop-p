@@ -6,7 +6,11 @@ import Account from './db/models/account.js'
 
 import hbs from './hbs/hbs.js'
 
-import routerController from './controller/routers-controller.js'
+import { compileSass } from './utils/sass-compile.js'
+
+import middlewareRouter from './routes/middleware-route.js'
+import routerController from './controller/routers-controller.js';
+
 
 const app = express()
 
@@ -31,6 +35,9 @@ const connectDB = async () => {
 
 }
 
+compileSass()
+
+app.use(middlewareRouter)
 app.use(routerController)
 
 connectDB().then(() => {

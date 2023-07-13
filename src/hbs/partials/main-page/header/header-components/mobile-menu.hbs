@@ -1,0 +1,125 @@
+<button class="navbar__btn" aria-label="main-mobile-menu">
+  <span class="navbar__btn-line"></span>
+  <span class="navbar__btn-line"></span>
+  <span class="navbar__btn-line"></span>
+  <span class="navbar__btn-line"></span>
+</button>
+
+<div class="navbar_menu">
+  <button class="navbar__btn-close" aria-label="close menu">
+    <svg class="navbar__icon-close" width="25px" height="25px">
+      <use href="../images/sprite.svg#icon-mobile-menu-close"></use>
+    </svg>
+  </button>
+
+  <ul class="mobile__nav-list">
+    <li class="mobile__nav-item mobile__nav-item--first-child">
+      <div class="mobile__entrance-box">
+        {{#if user}}
+        <div class="mobile__user-box">
+          <ul class="mobile__user-elements-list">
+            <li class="mobile__user-elements-item">
+              <h1 class="mobile__username">{{user.name}}</h1>
+            </li>
+            <li class="mobile__user-elements-item">
+              {{#if (eq user.role 'moderator')}}
+              <div class="mobile__user-elements-box">
+                <a class="mobile__username-link" href="/orders" aria-label="page orders">
+                  <p class="mobile__user-cart-text">Orders</p>
+                  <svg class="mobile__user-cart-icon" width="24" height="24">
+                    <use href="../images/sprite.svg#icon-orders-list"></use>
+                  </svg>
+                </a>
+
+                <a class="mobile__username-link" href="/cart" aria-label="page cart">
+                  <p class="mobile__user-cart-text">Cart</p>
+                  <svg class="mobile__user-cart-icon" width="24" height="24">
+                    <use href="../images/sprite.svg#icon-cart-menu"></use>
+                  </svg>
+                </a>
+              </div>
+              {{else}}
+
+              <a class="mobile__username-link" href="/cart" aria-label="page cart">
+                <p class="mobile__user-cart-text">Cart</p>
+                <svg class="mobile__user-cart-icon" width="24" height="24">
+                  <use href="../images/sprite.svg#icon-cart-menu"></use>
+                </svg>
+              </a>
+
+              {{/if}}
+            </li>
+            <li class="mobile__user-elements-item">
+              <button type="button" class="mobile-entrance__exit" aria-label="btn logout">
+                <p class="mobile__exit-text">Logout</p>
+                <svg class="mobile__exit-icon" width="20" height="20">
+                  <use href="../images/sprite.svg#icon-logout"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+        {{else}}
+        <button type="button" class="mobile-entrance__sign-up" aria-label="sign up">Sign Up</button>
+        <button type="button" class="mobile-entrance__sign-in" aria-label="sign in">Sign In</button>
+        {{/if}}
+      </div>
+    </li>
+    <li class="mobile__nav-item mobile__nav-item-test">
+      <div class="mobile__contacts">
+        <ul class="mobile__contacts-list">
+          <li class="mobile__contacts-item">
+            <a class="mobile__contacts-link" href="https://goo.gl/maps/fewdS8cpwcBx8UTT7" target="_blank"
+              rel="noreferrer, nofollow, noopener" aria-label="map address">
+              Ukraine, Zhytomyr
+            </a>
+          </li>
+          <li class="mobile__contacts-item">
+            <a class="mobile__contacts-link" href="tel:+380123456789" aria-label="phone number">
+              +38 012 345 67 89
+            </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="mobile__nav-item mobile__nav-item--last-child">
+      <div class="social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__contacts-link" href="https://www.instagram.com/a.gulinsky/" target="_blank" rel="noreferrer, nofollow, noopener"
+              aria-label="instagram link">
+              <svg class="social__contacts-icon" width="25px" height="25px">
+                <use href="../images/sprite.svg#icon-social-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__contacts-link" href="https://github.com/A-Gulinsky" target="_blank" rel="noreferrer, nofollow, noopener"
+              aria-label="facebook link">
+              <svg class="social__contacts-icon" width="25px" height="25px">
+                <use href="../images/sprite.svg#icon-social-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__contacts-link" href="https://github.com/A-Gulinsky" target="_blank" rel="noreferrer, nofollow, noopener"
+              aria-label="twitter link">
+              <svg class="social__contacts-icon" width="25px" height="25px">
+                <use href="../images/sprite.svg#icon-social-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__contacts-link" href="https://github.com/A-Gulinsky" target="_blank" rel="noreferrer, nofollow, noopener"
+              aria-label="github link">
+              <svg class="social__contacts-icon" width="25px" height="25px">
+                <use href="../images/sprite.svg#icon-social-github"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+
+</div>

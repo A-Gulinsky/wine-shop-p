@@ -1,0 +1,81 @@
+<div class="entrance">
+  <div class="entrance__box">
+    {{#if user}}
+    
+    <ul class="account__header-list">
+      <li class="account__header-item">
+
+        <a class="account__header-link" href="./cart" aria-label="page cart">
+          <p class="account__header-link-text">Cart</p>
+          <svg class="account__header-link-icon">
+            <use href="./images/sprite.svg#icon-cart-menu"></use>
+          </svg>
+          <span class="account__header-link-quantity">
+          
+          {{#if (comp user)}}
+            
+            9+
+
+          {{else}}
+
+            {{user.cart.waiting.length}}
+          
+          {{/if}}
+
+          </span>
+        </a>
+
+      </li>
+
+      {{#if (eq user.role 'moderator')}}
+
+        <li class="account__header-item">
+        
+          <a class="account__header-link" href="./orders" aria-label="page orders">
+            <p class="account__header-link-text">Orders</p>
+            <svg class="account__header-link-icon">
+              <use href="./images/sprite.svg#icon-orders-list"></use>
+            </svg>
+          </a>
+        
+        </li>
+
+      {{/if}}
+
+    </ul>
+    
+  
+    <div class="entrance__box-logout">
+      <p class="entrance__box-name">{{user.name}}</p>
+      <button class="exit" type="button" aria-label="button logout">
+        <p class="exit__btn-text">Logout</p>
+        <svg class="exit__btn-icon">
+          <use href="./images/sprite.svg#icon-logout"></use>
+        </svg>
+      </button>
+    </div>
+
+    {{else}}
+    <ul class="entrance__btn-list">
+
+      <li class="entrance__btn-item">
+        <button type="button" class="entrance__sign-up" aria-label="button sign up">
+          <p class="entrance__text">Sign Up</p>
+          <svg class="entrance__icon">
+            <use href="./images/sprite.svg#icon-entrance-register"></use>
+          </svg>
+        </button>
+      </li>
+
+      <li class="entrance__btn-item">
+        <button type="button" class="entrance__sign-in" aria-label="button sign in">
+          <p class="entrance__text">Sign In</p>
+          <svg class="entrance__icon">
+            <use href="./images/sprite.svg#icon-entrance-login"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+    {{/if}}
+  </div>
+</div>
