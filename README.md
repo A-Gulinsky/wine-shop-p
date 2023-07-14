@@ -58,7 +58,7 @@ src="https://res.cloudinary.com/dfbj7kdvy/image/upload/v1689288549/deco-photo-re
       <h3 style="color:#2C8AE8">Payment</h3>
       <p style="color: #798189">Once you have added an item to your shopping cart, you can reserve it, select a shipping method, pay for shipping upon receipt, and pay now. Thanks to the Nova Poshta API, you can select your city and post office number. Login details for a PayPal test account:</p>
       <ul>
-        <li><span style="color: #3D70A4">Login: </span><span style="color: #108A10">sb26jdf26216853@personal.example.com</span></li>
+        <li><span style="color: #3D70A4">Login: </span><span style="color: #108A10">sb-26jdf26216853@personal.example.com</span></li>
         <li><span style="color: #3D70A4">Password: </span><span style="color: #108A10">5R7bnM#m</span></li>
       </ul>
     </li>
