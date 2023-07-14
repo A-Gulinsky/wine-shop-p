@@ -48,6 +48,7 @@ export const cartPaypalService = async (req, res) => {
           cancel_url: 'http://localhost:3000/order/cancel' // unsuccess payment
         },
         transactions: [{
+          
           amount: {
             total: totalPrice, // total amount
             currency: 'USD'
