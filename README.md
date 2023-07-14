@@ -67,7 +67,7 @@ src="https://res.cloudinary.com/dfbj7kdvy/image/upload/v1689288549/deco-photo-re
       <p style="color: #798189">After choosing a payment method or delivery of goods, you can log into the moderator's account and process your order</p>
       <ul>
         <li><span style="color: #3D70A4">Login: </span><span style="color: #108A10">Moderator</span></li>
-        <li><span style="color: #3D70A4">Password: </span><span style="color: #108A10">123456789</span></li>
+        <li><span style="color: #3D70A4">Password: </span><span style="color: #108A10">rtF421KjCm993</span></li>
       </ul>
     </li>
   </ul>
