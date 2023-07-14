@@ -26,7 +26,7 @@ function updateCartInfo() {
   const orderedList = getListLength(infoOrderedItem)
   const productList = getListLength(infoProductItem)
 
-  // check each list length , display - block
+  // check each list length , if 0 - display - none
   checkListLength(processedList, infoProccesedItem)
   checkListLength(orderedList, infoOrderedItem)
   checkListLength(productList, infoProductItem)

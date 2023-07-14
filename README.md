@@ -14,7 +14,7 @@ src="https://res.cloudinary.com/dfbj7kdvy/image/upload/v1689288549/deco-photo-re
 </h3>
 
 <p align="center">
-  <img src="https://res.cloudinary.com/dfbj7kdvy/image/upload/v1689270656/pack_jv0hmy.png" alt="Wine Shop Logo">
+  <img src="https://res.cloudinary.com/dfbj7kdvy/image/upload/v1689332060/777-removebg-preview_rtllpe.png" alt="Wine Shop">
 </p>
 
 <h3 style="color: #2C8AE8; text-align:center;">
@@ -56,7 +56,7 @@ src="https://res.cloudinary.com/dfbj7kdvy/image/upload/v1689288549/deco-photo-re
   <ul style="color: white;list-style: none;">
     <li>
       <h3 style="color:#2C8AE8">Payment</h3>
-      <p style="color: #798189">After you have added the product to the basket, you can reserve it, select the delivery method, pay for delivery after receipt, and pay now. PayPal test account login details:</p>
+      <p style="color: #798189">Once you have added an item to your shopping cart, you can reserve it, select a shipping method, pay for shipping upon receipt, and pay now. Thanks to the Nova Poshta API, you can select your city and post office number. Login details for a PayPal test account:</p>
       <ul>
         <li><span style="color: #3D70A4">Login: </span><span style="color: #108A10">sb26jdf26216853@personal.example.com</span></li>
         <li><span style="color: #3D70A4">Password: </span><span style="color: #108A10">5R7bnM#m</span></li>

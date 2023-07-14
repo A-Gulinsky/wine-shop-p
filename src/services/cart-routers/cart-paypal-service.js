@@ -45,10 +45,9 @@ export const cartPaypalService = async (req, res) => {
         },
         redirect_urls: {
           return_url: 'https://wine-shop-zhytomyr.cyclic.app/success', // success payment
-          cancel_url: 'http://localhost:3000/order/cancel' // unsuccess payment
+          cancel_url: 'https://wine-shop-zhytomyr.cyclic.app/cart' // unsuccess payment
         },
         transactions: [{
-          
           amount: {
             total: totalPrice, // total amount
             currency: 'USD'
