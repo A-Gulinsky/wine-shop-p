@@ -91,9 +91,13 @@ async function orderNow() {
     // processed String
     const selectedCity = processedStringFunc(rawString)
 
+    console.log('SELECTED CITY', selectedCity)
+
     // get from api cities
     const cities = await deliveryModule.getCities();
     
+    console.log(`CITIES`, cities)
+
     // find the right city
     city = cities.find(city => city.Description === selectedCity);
 
