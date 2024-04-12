@@ -44,8 +44,8 @@ export const cartPaypalService = async (req, res) => {
           payment_method: 'paypal'
         },
         redirect_urls: {
-          return_url: 'https://zany-gray-gazelle-cape.cyclic.app/success', // success payment
-          cancel_url: 'http://localhost:3000/order/cancel' // unsuccess payment
+          return_url: 'https://wine-shop-zhytomyr.cyclic.app/success', // success payment
+          cancel_url: 'https://wine-shop-zhytomyr.cyclic.app/cart' // unsuccess payment
         },
         transactions: [{
           amount: {

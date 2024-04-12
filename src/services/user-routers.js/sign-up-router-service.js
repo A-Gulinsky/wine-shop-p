@@ -1,3 +1,4 @@
+import bcrypt from "bcrypt";
 import Account from "../../db/models/accounts.js";
 
 export const signUpService = async (req, res) => {
@@ -8,13 +9,22 @@ export const signUpService = async (req, res) => {
     const existingAccount = await Account.findOne({ $or: [{ username }, { email }] });
     
   if (existingAccount) {
-    return res.status(400).json({ error : "Account with the same name already exists"});
+    return res.status(400).json({ error : "Account with the same name or email already exists"});
   }
+
+  if (password.length <= 5) {
+    return res.status(400).json({ error: "Password is too weak" });
+  }
+
+  // bcrypt hash password
+  const saltRounds = 10;
+  const hashedPassword = await bcrypt.hash(password, saltRounds);
+  
 
   // create new account
   const account = new Account({
     username,
-    password,
+    password: hashedPassword,
     email,
     name,
     surname

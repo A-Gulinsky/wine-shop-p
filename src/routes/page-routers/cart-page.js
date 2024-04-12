@@ -19,6 +19,14 @@ cartPage.get('/cart', async(req, res) => {
   const userId = req.session.user._id
   const updatedAccount = await Account.findById(userId)
   req.session.user = updatedAccount
+  req.session.save((err) => {
+    if (err) {
+      console.error(err)
+      res.status(500).send('server error')
+      return
+    }
+        
+  })
 });
 
 export default cartPage

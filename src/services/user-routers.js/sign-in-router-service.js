@@ -1,4 +1,5 @@
 import Account from "../../db/models/accounts.js";
+import bcrypt from "bcrypt";
 
 export const signInService = async (req, res) => {
   
@@ -13,7 +14,10 @@ export const signInService = async (req, res) => {
     }
 
     // check user password
-    if (user.password !== password) {
+
+    const isPasswordValid = await bcrypt.compare(password, user.password);
+
+    if (!isPasswordValid) {
       return res.status(401).json({ error: "The username or password you entered is incorrect" });
     }
 

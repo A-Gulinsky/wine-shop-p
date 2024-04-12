@@ -44,9 +44,9 @@ function getListLength(infoItem) {
 // this function check each list length , if length = 0 , return display - none
 function checkListLength(list, infoItem) {
   
-  if (!list) {
+  if (list) {
 
-    infoItem.style.display = 'none';
+    infoItem.style.display = 'block';
 
   }
 
