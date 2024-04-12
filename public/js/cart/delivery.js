@@ -23,6 +23,7 @@ export async function getCities(selectedCity) {
 
 export async function getWarehouses(cityRef) {
   try {
+
     const response = await fetch('/api/get-warehouse', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

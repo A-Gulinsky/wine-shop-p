@@ -73,6 +73,7 @@ async function orderNow() {
   const deliveryNumberPostIcon = document.querySelector(`.order__delivery-input-post-icon`)
   
   // let city = null
+  let cityRef = null
   let warehouseNumber = null
   let cityDescription = null
   
@@ -94,7 +95,7 @@ async function orderNow() {
     // get from api cities
     const city = await deliveryModule.getCities(selectedCity);
 
-    console.log('city', city)
+    cityRef = city.Ref
 
     if (!city) {
 
@@ -121,7 +122,7 @@ async function orderNow() {
     const selectedNumber = deliveryPostNumber.value.trim()
 
     // get city post offices
-    const cityRef = city.Ref
+    // const cityRef = city.Ref
     
     // get warehouse
     const warehouse = await deliveryModule.getWarehouses(cityRef)

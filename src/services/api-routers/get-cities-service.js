@@ -36,7 +36,7 @@ export const getCitiesService = async (req, res) => {
       throw new Error(`City is not defind`);
     }
 
-    res.status(200).json(city.Description)
+    res.status(200).json(city)
 
   } catch (err) {
     console.log(err)
