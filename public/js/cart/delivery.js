@@ -15,7 +15,7 @@ export async function getCities() {
     }
 
     const data = await response.json()
-
+    console.log(`delivery.js`, data);
     return data
 
   } catch (err) {
