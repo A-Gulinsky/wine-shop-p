@@ -21,13 +21,16 @@ export const getCitiesService = async (req, res) => {
       },
       body: JSON.stringify(payload),
     })
+
+    console.log(`get cities service`, API_KEY)
+    console.log(`get cities service`, apiUrl);
+    console.log('get-cities-service', payload)
     
     if (!response.ok) {
       throw new Error(`Server Error`)
     }
 
     const data = await response.json()
-    console.log(`get-cities-service.js`, data)
     res.status(200).json(data.data)
 
   } catch (err) {

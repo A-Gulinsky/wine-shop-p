@@ -93,7 +93,7 @@ async function orderNow() {
 
     // get from api cities
     const cities = await deliveryModule.getCities();
-
+    
     // find the right city
     city = cities.find(city => city.Description === selectedCity);
 

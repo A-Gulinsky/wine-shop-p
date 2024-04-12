@@ -10,6 +10,8 @@ export async function getCities() {
       headers: {"Content-Type" : "application/json"}
     })
 
+    console.log(`RESPONSE`, response)
+
     if (!response.ok) {
       throw new Error(`Server Error`)
     }
