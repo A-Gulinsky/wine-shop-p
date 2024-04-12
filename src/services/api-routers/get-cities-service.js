@@ -7,7 +7,9 @@ const apiUrl = process.env.apiUrl
 export const getCitiesService = async (req, res) => {
   
   try {
-      
+
+    const cityName = req.body.selectedCity;
+
     const payload = {
       apiKey: API_KEY,
       modelName: 'Address',
@@ -21,17 +23,20 @@ export const getCitiesService = async (req, res) => {
       },
       body: JSON.stringify(payload),
     })
-
-    console.log(`get cities service`, API_KEY)
-    console.log(`get cities service`, apiUrl);
-    console.log('get-cities-service', payload)
     
     if (!response.ok) {
       throw new Error(`Server Error`)
     }
 
     const data = await response.json()
-    res.status(200).json(data.data)
+    
+    const city = data.data.find(city => city.Description === cityName);
+    
+    if (!city) {
+      throw new Error(`City is not defind`);
+    }
+
+    res.status(200).json(city.Description)
 
   } catch (err) {
     console.log(err)

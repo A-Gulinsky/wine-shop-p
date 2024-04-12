@@ -72,7 +72,7 @@ async function orderNow() {
   const deliveryCityLabelIcon = document.querySelector('.order__delivery-input-icon')
   const deliveryNumberPostIcon = document.querySelector(`.order__delivery-input-post-icon`)
   
-  let city = null
+  // let city = null
   let warehouseNumber = null
   let cityDescription = null
   
@@ -91,15 +91,10 @@ async function orderNow() {
     // processed String
     const selectedCity = processedStringFunc(rawString)
 
-    console.log('SELECTED CITY', selectedCity)
-
     // get from api cities
-    const cities = await deliveryModule.getCities();
-    
-    console.log(`CITIES`, cities)
+    const city = await deliveryModule.getCities(selectedCity);
 
-    // find the right city
-    city = cities.find(city => city.Description === selectedCity);
+    console.log('city', city)
 
     if (!city) {
 
